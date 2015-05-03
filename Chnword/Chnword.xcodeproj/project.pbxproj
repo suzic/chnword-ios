@@ -7,13 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A778C4831AEFD8E80058185F /* PageViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A778C4821AEFD8E80058185F /* PageViewTableViewCell.m */; };
+		A778C4861AF11BC90058185F /* StoreViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A778C4851AF11BC90058185F /* StoreViewTableViewCell.m */; };
+		A778C4881AF126700058185F /* QRCODE in Resources */ = {isa = PBXBuildFile; fileRef = A778C4871AF126700058185F /* QRCODE */; };
 		A78F9F551AED36C700F6CE9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F9F541AED36C700F6CE9C /* main.m */; };
 		A78F9F581AED36C700F6CE9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F9F571AED36C700F6CE9C /* AppDelegate.m */; };
-		A78F9F5B1AED36C700F6CE9C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F9F5A1AED36C700F6CE9C /* ViewController.m */; };
 		A78F9F5E1AED36C700F6CE9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A78F9F5C1AED36C700F6CE9C /* Main.storyboard */; };
 		A78F9F601AED36C700F6CE9C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A78F9F5F1AED36C700F6CE9C /* Images.xcassets */; };
 		A78F9F631AED36C700F6CE9C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78F9F611AED36C700F6CE9C /* LaunchScreen.xib */; };
 		A78F9F6F1AED36C700F6CE9C /* ChnwordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F9F6E1AED36C700F6CE9C /* ChnwordTests.m */; };
+		A78F9F7B1AEE684D00F6CE9C /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F9F7A1AEE684D00F6CE9C /* SplashViewController.m */; };
+		A78F9F7E1AEE685900F6CE9C /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F9F7D1AEE685900F6CE9C /* GuideViewController.m */; };
+		A78F9F811AEE68B900F6CE9C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F9F801AEE68B900F6CE9C /* MainViewController.m */; };
+		A78F9F841AEE68C900F6CE9C /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F9F831AEE68C900F6CE9C /* PageViewController.m */; };
+		A78F9F871AEE68DA00F6CE9C /* StoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F9F861AEE68DA00F6CE9C /* StoreViewController.m */; };
+		A78F9F8A1AEE68E500F6CE9C /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F9F891AEE68E500F6CE9C /* UserViewController.m */; };
+		A78F9F901AEE6AB400F6CE9C /* AnimViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F9F8F1AEE6AB400F6CE9C /* AnimViewController.m */; };
+		A78F9F931AEE6ABF00F6CE9C /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F9F921AEE6ABF00F6CE9C /* ScanViewController.m */; };
+		A78F9F961AEE6BB200F6CE9C /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F9F951AEE6BB200F6CE9C /* ResultViewController.m */; };
+		A78F9F991AEE730200F6CE9C /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F9F981AEE730200F6CE9C /* RegisterViewController.m */; };
+		A78F9F9B1AEE736000F6CE9C /* Resource in Resources */ = {isa = PBXBuildFile; fileRef = A78F9F9A1AEE736000F6CE9C /* Resource */; };
+		A78F9FA21AEE74A700F6CE9C /* util in Resources */ = {isa = PBXBuildFile; fileRef = A78F9FA11AEE74A700F6CE9C /* util */; };
+		A7E14C641AF6646D00018386 /* ModelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E14C631AF6646D00018386 /* ModelTableViewCell.m */; };
+		A7E14C671AF664D300018386 /* FontCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E14C661AF664D300018386 /* FontCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +43,49 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A778C4811AEFD8E80058185F /* PageViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewTableViewCell.h; sourceTree = "<group>"; };
+		A778C4821AEFD8E80058185F /* PageViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewTableViewCell.m; sourceTree = "<group>"; };
+		A778C4841AF11BC90058185F /* StoreViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewTableViewCell.h; sourceTree = "<group>"; };
+		A778C4851AF11BC90058185F /* StoreViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewTableViewCell.m; sourceTree = "<group>"; };
+		A778C4871AF126700058185F /* QRCODE */ = {isa = PBXFileReference; lastKnownFileType = folder; path = QRCODE; sourceTree = "<group>"; };
 		A78F9F4F1AED36C700F6CE9C /* Chnword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chnword.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A78F9F531AED36C700F6CE9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A78F9F541AED36C700F6CE9C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A78F9F561AED36C700F6CE9C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A78F9F571AED36C700F6CE9C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A78F9F591AED36C700F6CE9C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A78F9F5A1AED36C700F6CE9C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A78F9F5D1AED36C700F6CE9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A78F9F5F1AED36C700F6CE9C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A78F9F621AED36C700F6CE9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A78F9F681AED36C700F6CE9C /* ChnwordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChnwordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A78F9F6D1AED36C700F6CE9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A78F9F6E1AED36C700F6CE9C /* ChnwordTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChnwordTests.m; sourceTree = "<group>"; };
+		A78F9F791AEE684D00F6CE9C /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		A78F9F7A1AEE684D00F6CE9C /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		A78F9F7C1AEE685900F6CE9C /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
+		A78F9F7D1AEE685900F6CE9C /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
+		A78F9F7F1AEE68B900F6CE9C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		A78F9F801AEE68B900F6CE9C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		A78F9F821AEE68C900F6CE9C /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		A78F9F831AEE68C900F6CE9C /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		A78F9F851AEE68DA00F6CE9C /* StoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreViewController.h; sourceTree = "<group>"; };
+		A78F9F861AEE68DA00F6CE9C /* StoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreViewController.m; sourceTree = "<group>"; };
+		A78F9F881AEE68E500F6CE9C /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		A78F9F891AEE68E500F6CE9C /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		A78F9F8E1AEE6AB400F6CE9C /* AnimViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimViewController.h; sourceTree = "<group>"; };
+		A78F9F8F1AEE6AB400F6CE9C /* AnimViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimViewController.m; sourceTree = "<group>"; };
+		A78F9F911AEE6ABF00F6CE9C /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
+		A78F9F921AEE6ABF00F6CE9C /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
+		A78F9F941AEE6BB200F6CE9C /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		A78F9F951AEE6BB200F6CE9C /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		A78F9F971AEE730200F6CE9C /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		A78F9F981AEE730200F6CE9C /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		A78F9F9A1AEE736000F6CE9C /* Resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resource; sourceTree = "<group>"; };
+		A78F9FA11AEE74A700F6CE9C /* util */ = {isa = PBXFileReference; lastKnownFileType = folder; path = util; sourceTree = "<group>"; };
+		A78F9FA31AEE806100F6CE9C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		A7E14C621AF6646D00018386 /* ModelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelTableViewCell.h; sourceTree = "<group>"; };
+		A7E14C631AF6646D00018386 /* ModelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelTableViewCell.m; sourceTree = "<group>"; };
+		A7E14C651AF664D300018386 /* FontCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontCollectionViewCell.h; sourceTree = "<group>"; };
+		A7E14C661AF664D300018386 /* FontCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +106,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A778C4801AEFD73D0058185F /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				A778C4811AEFD8E80058185F /* PageViewTableViewCell.h */,
+				A778C4821AEFD8E80058185F /* PageViewTableViewCell.m */,
+				A778C4841AF11BC90058185F /* StoreViewTableViewCell.h */,
+				A778C4851AF11BC90058185F /* StoreViewTableViewCell.m */,
+				A7E14C621AF6646D00018386 /* ModelTableViewCell.h */,
+				A7E14C631AF6646D00018386 /* ModelTableViewCell.m */,
+				A7E14C651AF664D300018386 /* FontCollectionViewCell.h */,
+				A7E14C661AF664D300018386 /* FontCollectionViewCell.m */,
+			);
+			name = cells;
+			sourceTree = "<group>";
+		};
 		A78F9F461AED36C700F6CE9C = {
 			isa = PBXGroup;
 			children = (
@@ -81,14 +142,17 @@
 		A78F9F511AED36C700F6CE9C /* Chnword */ = {
 			isa = PBXGroup;
 			children = (
+				A778C4871AF126700058185F /* QRCODE */,
+				A78F9FA11AEE74A700F6CE9C /* util */,
+				A78F9F9A1AEE736000F6CE9C /* Resource */,
+				A78F9F781AEE674900F6CE9C /* classes */,
 				A78F9F561AED36C700F6CE9C /* AppDelegate.h */,
 				A78F9F571AED36C700F6CE9C /* AppDelegate.m */,
-				A78F9F591AED36C700F6CE9C /* ViewController.h */,
-				A78F9F5A1AED36C700F6CE9C /* ViewController.m */,
 				A78F9F5C1AED36C700F6CE9C /* Main.storyboard */,
 				A78F9F5F1AED36C700F6CE9C /* Images.xcassets */,
 				A78F9F611AED36C700F6CE9C /* LaunchScreen.xib */,
 				A78F9F521AED36C700F6CE9C /* Supporting Files */,
+				A78F9FA31AEE806100F6CE9C /* PrefixHeader.pch */,
 			);
 			path = Chnword;
 			sourceTree = "<group>";
@@ -117,6 +181,34 @@
 				A78F9F6D1AED36C700F6CE9C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A78F9F781AEE674900F6CE9C /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				A778C4801AEFD73D0058185F /* cells */,
+				A78F9F791AEE684D00F6CE9C /* SplashViewController.h */,
+				A78F9F7A1AEE684D00F6CE9C /* SplashViewController.m */,
+				A78F9F7C1AEE685900F6CE9C /* GuideViewController.h */,
+				A78F9F7D1AEE685900F6CE9C /* GuideViewController.m */,
+				A78F9F971AEE730200F6CE9C /* RegisterViewController.h */,
+				A78F9F981AEE730200F6CE9C /* RegisterViewController.m */,
+				A78F9F7F1AEE68B900F6CE9C /* MainViewController.h */,
+				A78F9F801AEE68B900F6CE9C /* MainViewController.m */,
+				A78F9F821AEE68C900F6CE9C /* PageViewController.h */,
+				A78F9F831AEE68C900F6CE9C /* PageViewController.m */,
+				A78F9F851AEE68DA00F6CE9C /* StoreViewController.h */,
+				A78F9F861AEE68DA00F6CE9C /* StoreViewController.m */,
+				A78F9F881AEE68E500F6CE9C /* UserViewController.h */,
+				A78F9F891AEE68E500F6CE9C /* UserViewController.m */,
+				A78F9F8E1AEE6AB400F6CE9C /* AnimViewController.h */,
+				A78F9F8F1AEE6AB400F6CE9C /* AnimViewController.m */,
+				A78F9F911AEE6ABF00F6CE9C /* ScanViewController.h */,
+				A78F9F921AEE6ABF00F6CE9C /* ScanViewController.m */,
+				A78F9F941AEE6BB200F6CE9C /* ResultViewController.h */,
+				A78F9F951AEE6BB200F6CE9C /* ResultViewController.m */,
+			);
+			name = classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +291,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A78F9F9B1AEE736000F6CE9C /* Resource in Resources */,
+				A78F9FA21AEE74A700F6CE9C /* util in Resources */,
 				A78F9F5E1AED36C700F6CE9C /* Main.storyboard in Resources */,
 				A78F9F631AED36C700F6CE9C /* LaunchScreen.xib in Resources */,
+				A778C4881AF126700058185F /* QRCODE in Resources */,
 				A78F9F601AED36C700F6CE9C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,9 +314,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A78F9F5B1AED36C700F6CE9C /* ViewController.m in Sources */,
+				A78F9F8A1AEE68E500F6CE9C /* UserViewController.m in Sources */,
+				A7E14C671AF664D300018386 /* FontCollectionViewCell.m in Sources */,
+				A78F9F901AEE6AB400F6CE9C /* AnimViewController.m in Sources */,
+				A78F9F811AEE68B900F6CE9C /* MainViewController.m in Sources */,
 				A78F9F581AED36C700F6CE9C /* AppDelegate.m in Sources */,
+				A78F9F7E1AEE685900F6CE9C /* GuideViewController.m in Sources */,
+				A78F9F931AEE6ABF00F6CE9C /* ScanViewController.m in Sources */,
+				A7E14C641AF6646D00018386 /* ModelTableViewCell.m in Sources */,
+				A78F9F871AEE68DA00F6CE9C /* StoreViewController.m in Sources */,
+				A78F9F991AEE730200F6CE9C /* RegisterViewController.m in Sources */,
+				A778C4861AF11BC90058185F /* StoreViewTableViewCell.m in Sources */,
 				A78F9F551AED36C700F6CE9C /* main.m in Sources */,
+				A78F9F7B1AEE684D00F6CE9C /* SplashViewController.m in Sources */,
+				A78F9F841AEE68C900F6CE9C /* PageViewController.m in Sources */,
+				A778C4831AEFD8E80058185F /* PageViewTableViewCell.m in Sources */,
+				A78F9F961AEE6BB200F6CE9C /* ResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +455,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Chnword/PrefixHeader.pch;
 				INFOPLIST_FILE = Chnword/Info.plist;
+				INFOPLIST_PREFIX_HEADER = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -357,7 +468,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Chnword/PrefixHeader.pch;
 				INFOPLIST_FILE = Chnword/Info.plist;
+				INFOPLIST_PREFIX_HEADER = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -416,6 +530,7 @@
 				A78F9F741AED36C700F6CE9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A78F9F751AED36C700F6CE9C /* Build configuration list for PBXNativeTarget "ChnwordTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +539,7 @@
 				A78F9F771AED36C700F6CE9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  AnimViewController.h
 //  Chnword
 //
-//  Created by khtc on 15/4/26.
+//  Created by khtc on 15/4/27.
 //  Copyright (c) 2015年 chnword. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface AnimViewController : UIViewController
 
 @end
-
