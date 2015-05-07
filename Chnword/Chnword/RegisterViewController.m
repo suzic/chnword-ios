@@ -24,7 +24,7 @@
     
     //添加用户指引
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([defaults boolForKey:CHNWORD_USER_FIRSTLOGIN]) {
+    if (![defaults boolForKey:CHNWORD_USER_FIRSTLOGIN]) {
         UIViewController *guideViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GuideViewController"];
         [self.view.window insertSubview:guideViewController.view aboveSubview:splashViewController.view];
     }

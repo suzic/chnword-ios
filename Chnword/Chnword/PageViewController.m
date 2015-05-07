@@ -22,6 +22,12 @@
     // Do any additional setup after loading the view.
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -79,6 +85,8 @@
 {
     UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"AnimViewController"];
     [self.navigationController pushViewController:viewController animated:YES];
+    self.tabBarController.hidesBottomBarWhenPushed = YES;
+    self.tabBarController.tabBar.hidden = YES;
 }
 
 /**
@@ -88,7 +96,8 @@
 {
     UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ScanViewController"];
     [self.navigationController pushViewController:viewController animated:YES];
-    
+    self.tabBarController.hidesBottomBarWhenPushed = YES;
+    self.tabBarController.tabBar.hidden = YES;
 }
 
 @end

@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "QRCODE/QrSearchViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
-@interface ScanViewController : QrSearchViewController
+
+@interface ScanViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
 
 //@property (assign, nonatomic) ShowCardViewController* refViewController;
+
+@property (nonatomic, assign) AVCaptureDevicePosition captureType;
+
 
 @property (nonatomic, retain) IBOutlet UIImageView *qrCodeView;
 
