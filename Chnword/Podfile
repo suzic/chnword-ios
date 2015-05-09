@@ -3,10 +3,10 @@
 
 target 'Chnword' do
 	pod 'Kiwi', '~> 2.3.1'
+	pod ‘TesseractOCRiOS’, ‘~> 4.0.0’
 
 end
 
 target 'ChnwordTests' do
 
 end
-

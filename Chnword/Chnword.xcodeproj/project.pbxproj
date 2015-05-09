@@ -204,7 +204,6 @@
 		A78F9F461AED36C700F6CE9C = {
 			isa = PBXGroup;
 			children = (
-				A7DD18C11AF9144400F4FE21 /* hci */,
 				A70462751AF7B3E3005F2FE8 /* util */,
 				A70462391AF7ABD1005F2FE8 /* Frameworks */,
 				A78F9F511AED36C700F6CE9C /* Chnword */,
@@ -292,13 +291,6 @@
 			name = classes;
 			sourceTree = "<group>";
 		};
-		A7DD18C11AF9144400F4FE21 /* hci */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = hci;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -348,6 +340,7 @@
 				TargetAttributes = {
 					A78F9F4E1AED36C700F6CE9C = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = C3G79G7UVP;
 					};
 					A78F9F671AED36C700F6CE9C = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -553,11 +546,13 @@
 					I386,
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Chnword/PrefixHeader.pch;
 				INFOPLIST_FILE = Chnword/Info.plist;
 				INFOPLIST_PREFIX_HEADER = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -581,11 +576,13 @@
 					I386,
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Chnword/PrefixHeader.pch;
 				INFOPLIST_FILE = Chnword/Info.plist;
 				INFOPLIST_PREFIX_HEADER = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
