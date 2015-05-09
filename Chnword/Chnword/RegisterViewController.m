@@ -17,18 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    //添加闪屏
-    UIViewController *splashViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"SplashViewController"];
-    [self.view.window addSubview:splashViewController.view];
-    
-    //添加用户指引
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if (![defaults boolForKey:CHNWORD_USER_FIRSTLOGIN]) {
-        UIViewController *guideViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"GuideViewController"];
-        [self.view.window insertSubview:guideViewController.view aboveSubview:splashViewController.view];
-    }
-    
 }
 
 - (void)didReceiveMemoryWarning {

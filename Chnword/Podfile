@@ -1,12 +1,7 @@
-# Uncomment this line to define a global platform for your project
 # platform :ios, ‘7.0’
 
-target 'Chnword' do
-	pod 'Kiwi', '~> 2.3.1'
-	pod ‘TesseractOCRiOS’, ‘~> 4.0.0’
-
-end
-
-target 'ChnwordTests' do
+target "Chnword" do
+	pod "Kiwi", "~> 2.3.1"
+	pod "TesseractOCRiOS", "> 4.0.0"
 
 end

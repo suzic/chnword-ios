@@ -10,7 +10,7 @@
 
 @interface GuideViewController ()
 
-@property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, retain) UIScrollView *scrollView;
 @property (nonatomic, retain) IBOutlet UIPageControl *pageControl;
 
 @end
@@ -22,29 +22,65 @@
     // Do any additional setup after loading the view.
     
     self.pageControl.currentPage = 0;
-    self.pageControl.numberOfPages = 4;
+    self.pageControl.numberOfPages = 3;
     
-}
-
-- (void) viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
+    UIScreen *screen = [UIScreen mainScreen];
+    CGRect rect = CGRectMake(0, 0, screen.bounds.size.width, screen.bounds.size.height);
+    self.scrollView = [[UIScrollView alloc] initWithFrame:rect];
+    self.scrollView.userInteractionEnabled = YES;
+    self.scrollView.showsHorizontalScrollIndicator = NO;
+    self.scrollView.showsVerticalScrollIndicator = NO;
+//    self.scrollView.scrollEnabled = NO;
+    self.scrollView.pagingEnabled = YES;
+    self.scrollView.contentSize = CGSizeMake(screen.bounds.size.width * 3, screen.bounds.size.height);
+    self.scrollView.directionalLockEnabled = YES;
+    self.scrollView.clipsToBounds = YES;
+    
+    
+    
+    
+    float width = self.scrollView.frame.size.width, height = self.scrollView.frame.size.height;
+    
     UIImageView *imageView;
     UIButton *button;
-    float width = self.scrollView.frame.size.width, height = self.scrollView.frame.size.height;
+    
 
-    for (int i = 0; i < 4; i ++) {
-        imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"xiaohei_big.jpg"]];
+    
+    for (int i = 0; i < 3; i ++) {
+        NSString *imageName = [NSString stringWithFormat:@"guide_%d.png", i + 1];
+        UIImage *image = [UIImage imageNamed:imageName];
+        
+        imageView = [[UIImageView alloc] initWithImage:image];
+        
+        imageView.userInteractionEnabled = YES;
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        
         imageView.frame = CGRectMake(i * width, 0, width, height);
         imageView.contentMode = UIViewContentModeScaleAspectFit;
         [self.scrollView addSubview:imageView];
+        
+        NSLog(@"%@ image : %@", NSStringFromCGRect(imageView.frame), imageName);
     }
     
-    CGRect rect = CGRectMake( 3 * width + width/2 - 20, height - 50, 40, 40);
-    button = [[UIButton alloc] initWithFrame:rect];
-    button.titleLabel.text = @"开始旅程";
+    
+    CGRect buttonRect = CGRectMake( 0, 0, 200, 100);
+    button = [[UIButton alloc] initWithFrame:buttonRect];
+    button.center = CGPointMake(2.5 * width, height - 100);
+    button.backgroundColor = [UIColor greenColor];
+    [button setImage:[UIImage imageNamed:@"btn_start.png"] forState:UIControlStateNormal];
+    
     [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
     
+    NSLog(@"%@", NSStringFromCGRect(button.frame));
+    [self.scrollView addSubview:button];
+    
+    
+    [self.view insertSubview:self.scrollView belowSubview:self.pageControl];
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     
 
 }
@@ -56,7 +92,7 @@
 
 - (void) buttonClicked:(id) sender
 {
-    [self.view removeFromSuperview];
+    [self performSegueWithIdentifier:@"RegisterViewController" sender:nil];
 }
 
 /**
@@ -71,7 +107,8 @@
     
     CGRect rect = CGRectMake(i * width, 0, width, height);
     
-    [self.scrollView scrollRectToVisible:rect animated:YES];
+//    [self.scrollView scrollRectToVisible:rect animated:YES];
+    self.scrollView.contentOffset = CGPointMake(i * width, 0);
     
 }
 

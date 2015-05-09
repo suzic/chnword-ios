@@ -8,6 +8,7 @@
 
 #import "AnimViewController.h"
 #import "AnimCollectionViewCell.h"
+#import "ResultViewController.h"
 
 
 @interface AnimViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
@@ -19,6 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+//    self.navigationController.navigationBarHidden = YES; 
+//    self.navigationController.navigationController.navigationBarHidden = YES;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,7 +39,7 @@
 }
 - (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 50;
+    return 20;
 }
 
 - (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -43,7 +48,7 @@
     
     cell = (AnimCollectionViewCell *) [collectionView dequeueReusableCellWithReuseIdentifier:@"AnimCollectionViewCell" forIndexPath:indexPath];
     
-    cell.modleNameLabel.text = @"字";
+    cell.modleNameLabel.text = @"模块";
     
     return cell;
 }
@@ -52,6 +57,10 @@
 - (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+//    ResultViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ResultViewController"];
+//    [self.navigationController pushViewController:viewController animated:YES];
+    
+    [self performSegueWithIdentifier:@"AnimRes" sender:nil];
     
 }
 

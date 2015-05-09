@@ -7,7 +7,7 @@
 //
 
 #import "SplashViewController.h"
-#import "util/NSObject+Delay.h"
+#import "NSObject+Delay.h"
 
 @interface SplashViewController ()
 
@@ -24,9 +24,19 @@
 {
     [super viewWillAppear:animated];
     
+    
+    NSLog(@"remove from window begin");
     [self performBlock:^{
-        [self.view removeFromSuperview];
-    } afterDelay:2000];
+        NSLog(@"after remove from window");
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        if (![defaults boolForKey:CHNWORD_USER_FIRSTLOGIN]) {
+            [self performSegueWithIdentifier:@"GuideViewController" sender:nil];
+        }else {
+            [self performSegueWithIdentifier:@"RegisterViewController" sender:nil];
+        }
+    } afterDelay:2];
+    
     
 }
 
