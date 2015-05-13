@@ -24,6 +24,7 @@
 		A704627A1AF7C3FB005F2FE8 /* AnimCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A70462791AF7C3FB005F2FE8 /* AnimCollectionViewCell.m */; };
 		A7158E661B02D555006EB801 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7158E651B02D555006EB801 /* NetManager.m */; };
 		A7158E691B02D56C006EB801 /* NetParamFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A7158E681B02D56C006EB801 /* NetParamFactory.m */; };
+		A7158E6C1B03A1DF006EB801 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = A7158E6B1B03A1DF006EB801 /* Util.m */; };
 		A771C3961B00FF6700351A11 /* AfnewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A771C3951B00FF6700351A11 /* AfnewDemo.m */; };
 		A778C4831AEFD8E80058185F /* PageViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A778C4821AEFD8E80058185F /* PageViewTableViewCell.m */; };
 		A778C4861AF11BC90058185F /* StoreViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A778C4851AF11BC90058185F /* StoreViewTableViewCell.m */; };
@@ -109,6 +110,8 @@
 		A7158E651B02D555006EB801 /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
 		A7158E671B02D56C006EB801 /* NetParamFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetParamFactory.h; sourceTree = "<group>"; };
 		A7158E681B02D56C006EB801 /* NetParamFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetParamFactory.m; sourceTree = "<group>"; };
+		A7158E6A1B03A1DF006EB801 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		A7158E6B1B03A1DF006EB801 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		A771C3941B00FF6700351A11 /* AfnewDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfnewDemo.h; sourceTree = "<group>"; };
 		A771C3951B00FF6700351A11 /* AfnewDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfnewDemo.m; sourceTree = "<group>"; };
 		A778C4811AEFD8E80058185F /* PageViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewTableViewCell.h; sourceTree = "<group>"; };
@@ -291,6 +294,8 @@
 			children = (
 				A78F382F1AFDA25E002A6F25 /* NSObject+Delay.h */,
 				A78F38301AFDA25E002A6F25 /* NSObject+Delay.m */,
+				A7158E6A1B03A1DF006EB801 /* Util.h */,
+				A7158E6B1B03A1DF006EB801 /* Util.m */,
 			);
 			name = util;
 			path = Chnword/util;
@@ -587,6 +592,7 @@
 				A78F9F8A1AEE68E500F6CE9C /* UserViewController.m in Sources */,
 				A78F38311AFDA25E002A6F25 /* NSObject+Delay.m in Sources */,
 				A7E14C671AF664D300018386 /* FontCollectionViewCell.m in Sources */,
+				A7158E6C1B03A1DF006EB801 /* Util.m in Sources */,
 				A78F38651AFDD0B4002A6F25 /* DisplayMovieViewController.m in Sources */,
 				A7158E661B02D555006EB801 /* NetManager.m in Sources */,
 				A704627A1AF7C3FB005F2FE8 /* AnimCollectionViewCell.m in Sources */,
