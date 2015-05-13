@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>6AECA204-F46F-477F-9584-771AE7181A91</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Chnword</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>E8776A0198E617B9959B67A446DFDF8CE3F6E6A9</key>
 		<string>https://github.com/suzic/chnword-ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Chnword/Chnword.xcodeproj</string>
+	<string>Chnword/Chnword.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>E8776A0198E617B9959B67A446DFDF8CE3F6E6A9</key>
