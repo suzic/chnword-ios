@@ -10,7 +10,7 @@
 
 @implementation NetManager
 
-+ (void) postRequest:(NSString *) url param:(NSDictionary *) param success:(void (^)(id json)) success fail:( void (^)()) fail
++ (void) postRequest:(NSString *) url param:(NSDictionary *) param success:(void (^)(id jsonObject)) success fail:(void (^)(void)) fail
 {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     

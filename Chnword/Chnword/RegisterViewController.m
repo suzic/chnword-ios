@@ -40,17 +40,18 @@
     NSString *userid = @"userid";
     
     //网络测试入口
-//    NSString *url = @"";
-//    NSDictionary *param = [NetParamFactory verifyParam:opid userid:userid device:deviceId code:@"code" user:@"user"];
-//    [NetManager postRequest:url param:param success:^(id json){
-//        
-//        NSLog(@"success with json: %@", json);
-//        
-//    }fail:^ (){
-//        NSLog(@"fail ");
-//    }];
+    NSString *url = @"http://app.3000zi.com/api/verify.php";
+    NSDictionary *param = [NetParamFactory verifyParam:opid userid:userid device:deviceId code:@"code" user:@"user"];
+    [NetManager postRequest:url param:param success:^(id json){
+        
+        NSLog(@"success with json: %@", json);
+        
+    }fail:^ (){
+        NSLog(@"fail ");
+    }];
+
     
-//    NSString *url = @"";
+//    NSString *url = @"http://app.3000zi.com/api/list.php";
 //    NSDictionary *param = [NetParamFactory listParam:opid userid:userid device:deviceId page:0 size:0];
 //    [NetManager postRequest:url param:param success:^(id json){
 //        
@@ -90,7 +91,7 @@
 //        NSLog(@"fail ");
 //    }];
 
-//    NSString *url = @"";
+//    NSString *url = @"http://app.3000zi.com/api/regist.php";
 //    NSDictionary *param = [NetParamFactory registParam:opid userid:userid device:deviceId userCode:@"usercode" deviceId:deviceId session:@"sessionId" verify:@"verify"];
 //    [NetManager postRequest:url param:param success:^(id json){
 //        

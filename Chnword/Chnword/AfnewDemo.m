@@ -7,6 +7,7 @@
 //
 
 #import "AfnewDemo.h"
+#import "AFNetworking.h"
 
 @implementation AfnewDemo
 

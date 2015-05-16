@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFNetworking.h"
 
 @interface NetManager : NSObject
 
-+ (void) postRequest:(NSString *) url param:(NSDictionary *) param success:((^)(void)) success fail:((^)(void)) fail;
++ (void) postRequest:(NSString *) url param:(NSDictionary *) param success:(void (^)(id jsonObject)) success fail:(void (^)(void)) fail;
 
 @end

@@ -1,7 +1,0 @@
-# platform :ios, ‘7.0’
-
-target "Chnword" do
-	pod "Kiwi", "~> 2.3.1"
-	pod 'AFNetworking', '~> 2.5.3'
-#	pod 'TesseractOCRiOS', '~> 4.0.0'
-end
