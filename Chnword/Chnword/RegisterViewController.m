@@ -97,7 +97,7 @@
 //        NSLog(@"fail ");
 //    }];
     
-//    NSString *url = @"";
+//    NSString *url = @"http://app.3000zi.com/api/sublist.php";
 //    NSDictionary *param = [NetParamFactory subListParam:opid userid:userid device:deviceId lists:@[@"zone_0001"]];
 //    [NetManager postRequest:url param:param success:^(id json){
 //        
@@ -107,17 +107,17 @@
 //        NSLog(@"fail ");
 //    }];
 
-//    NSString *url = @"";
-//    NSDictionary *param = [NetParamFactory wordParam:opid userid:userid device:deviceId word:@"天"];
-//    [NetManager postRequest:url param:param success:^(id json){
-//        
-//        NSLog(@"success with json: %@", json);
-//        
-//    }fail:^ (){
-//        NSLog(@"fail ");
-//    }];
+    NSString *url = @"http://app.3000zi.com/api/word.php";
+    NSDictionary *param = [NetParamFactory wordParam:opid userid:userid device:deviceId word:@"王"];
+    [NetManager postRequest:url param:param success:^(id json){
+        
+        NSLog(@"success with json: %@", json);
+        
+    }fail:^ (){
+        NSLog(@"fail ");
+    }];
     
-//    NSString *url = @"";
+//    NSString *url = @"http://app.3000zi.com/api/show.php";
 //    NSDictionary *param = [NetParamFactory showParam:opid userid:userid device:deviceId wordCode:@"zone_0001"];
 //    [NetManager postRequest:url param:param success:^(id json){
 //        
@@ -127,15 +127,15 @@
 //        NSLog(@"fail ");
 //    }];
 
-    NSString *url = @"http://app.3000zi.com/api/regist.php";
-    NSDictionary *param = [NetParamFactory registParam:opid userid:userid device:deviceId userCode:@"usercode" deviceId:deviceId session:@"sessionId" verify:@"verify"];
-    [NetManager postRequest:url param:param success:^(id json){
-        
-        NSLog(@"success with json: %@", json);
-        
-    }fail:^ (){
-        NSLog(@"fail ");
-    }];
+//    NSString *url = @"http://app.3000zi.com/api/regist.php";
+//    NSDictionary *param = [NetParamFactory registParam:opid userid:userid device:deviceId userCode:@"usercode" deviceId:deviceId session:@"sessionId" verify:@"verify"];
+//    [NetManager postRequest:url param:param success:^(id json){
+//        
+//        NSLog(@"success with json: %@", json);
+//        
+//    }fail:^ (){
+//        NSLog(@"fail ");
+//    }];
 
     
     

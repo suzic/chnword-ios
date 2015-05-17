@@ -25,6 +25,7 @@
 		A7158E661B02D555006EB801 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7158E651B02D555006EB801 /* NetManager.m */; };
 		A7158E691B02D56C006EB801 /* NetParamFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A7158E681B02D56C006EB801 /* NetParamFactory.m */; };
 		A7158E6C1B03A1DF006EB801 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = A7158E6B1B03A1DF006EB801 /* Util.m */; };
+		A72D73561B084DDC0013E735 /* DataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A72D73551B084DDC0013E735 /* DataUtil.m */; };
 		A771C3961B00FF6700351A11 /* AfnewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A771C3951B00FF6700351A11 /* AfnewDemo.m */; };
 		A778C4831AEFD8E80058185F /* PageViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A778C4821AEFD8E80058185F /* PageViewTableViewCell.m */; };
 		A778C4861AF11BC90058185F /* StoreViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A778C4851AF11BC90058185F /* StoreViewTableViewCell.m */; };
@@ -113,6 +114,8 @@
 		A7158E681B02D56C006EB801 /* NetParamFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetParamFactory.m; sourceTree = "<group>"; };
 		A7158E6A1B03A1DF006EB801 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		A7158E6B1B03A1DF006EB801 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		A72D73541B084DDC0013E735 /* DataUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataUtil.h; sourceTree = "<group>"; };
+		A72D73551B084DDC0013E735 /* DataUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataUtil.m; sourceTree = "<group>"; };
 		A771C3941B00FF6700351A11 /* AfnewDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfnewDemo.h; sourceTree = "<group>"; };
 		A771C3951B00FF6700351A11 /* AfnewDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfnewDemo.m; sourceTree = "<group>"; };
 		A778C4811AEFD8E80058185F /* PageViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewTableViewCell.h; sourceTree = "<group>"; };
@@ -303,6 +306,8 @@
 				A78F38301AFDA25E002A6F25 /* NSObject+Delay.m */,
 				A7158E6A1B03A1DF006EB801 /* Util.h */,
 				A7158E6B1B03A1DF006EB801 /* Util.m */,
+				A72D73541B084DDC0013E735 /* DataUtil.h */,
+				A72D73551B084DDC0013E735 /* DataUtil.m */,
 			);
 			name = util;
 			path = Chnword/util;
@@ -610,6 +615,7 @@
 				A7158E661B02D555006EB801 /* NetManager.m in Sources */,
 				A7A98CBE1B06ED2500A1176D /* UIAlertView+AFNetworking.m in Sources */,
 				A7A98CC31B06ED2500A1176D /* UIWebView+AFNetworking.m in Sources */,
+				A72D73561B084DDC0013E735 /* DataUtil.m in Sources */,
 				A7A98CBB1B06ED2500A1176D /* AFURLSessionManager.m in Sources */,
 				A7A98CC01B06ED2500A1176D /* UIImageView+AFNetworking.m in Sources */,
 				A704627A1AF7C3FB005F2FE8 /* AnimCollectionViewCell.m in Sources */,
