@@ -87,15 +87,6 @@
 //    }];
 
     
-//    NSString *url = @"http://app.3000zi.com/api/list.php";
-//    NSDictionary *param = [NetParamFactory listParam:opid userid:userid device:deviceId page:0 size:0];
-//    [NetManager postRequest:url param:param success:^(id json){
-//        
-//        NSLog(@"success with json: %@", json);
-//        
-//    }fail:^ (){
-//        NSLog(@"fail ");
-//    }];
     
 //    NSString *url = @"http://app.3000zi.com/api/sublist.php";
 //    NSDictionary *param = [NetParamFactory subListParam:opid userid:userid device:deviceId lists:@[@"zone_0001"]];
