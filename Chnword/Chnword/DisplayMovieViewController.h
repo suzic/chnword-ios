@@ -10,4 +10,6 @@
 
 @interface DisplayMovieViewController : UIViewController
 
+@property (nonatomic, retain) NSString *wordCode;
+
 @end

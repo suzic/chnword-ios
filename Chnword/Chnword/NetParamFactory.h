@@ -21,9 +21,11 @@
 + (NSDictionary *) listParam:(NSString *) opid userid:(NSString *) userid device:(NSString *) deviceId page:(int) page size:(int) size;
 
 /**
- *
+ *  @depressed
  */
-+ (NSDictionary *) subListParam:(NSString *) opid userid:(NSString *) userid device:(NSString *) deviceId lists:(NSArray *) zoneList;
++ (NSDictionary *) subListParam:(NSString *) opid userid:(NSString *) userid device:(NSString *) deviceId lists:(NSArray *) zoneList page:(int) page size:(int) size;
+
++ (NSDictionary *) subListParam:(NSString *) opid userid:(NSString *) userid device:(NSString *) deviceId zone:(NSString *) zoneList page:(int) page size:(int) size;
 
 /**
  *

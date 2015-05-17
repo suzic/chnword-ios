@@ -22,6 +22,7 @@
 @property (nonatomic, retain) MBProgressHUD *hud;
 @property (nonatomic, retain) NSArray *names;
 @property (nonatomic, retain) NSArray *cnames;
+@property (nonatomic, assign) NSInteger raw;
 
 @end
 
@@ -34,6 +35,8 @@
 //    self.navigationController.navigationBarHidden = YES; 
 //    self.navigationController.navigationController.navigationBarHidden = YES;
     
+    self.raw = 0;
+    
     NSString *opid = [Util generateUuid];
     NSString *userid = @"userid";
     NSString *deviceId = [Util getUdid];
@@ -41,10 +44,12 @@
     
     [self.hud show:YES];
     
+    NSLog(@"%@", URL_LIST);
+    
     [NetManager postRequest:URL_LIST param:param success:^(id json){
         
-        NSDictionary *dict = [json jsonValue];
-        
+//        NSDictionary *dict = [json jsonValue];
+        NSDictionary *dict = json;
         NSString *result = [dict objectForKey:@"result"];
         if (result && [result isEqualToString:@"1"]) {
             
@@ -108,16 +113,36 @@
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
 //    ResultViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ResultViewController"];
 //    [self.navigationController pushViewController:viewController animated:YES];
-    
+    self.raw = indexPath.row;
     [self performSegueWithIdentifier:@"AnimRes" sender:nil];
     
+}
+
+#pragma mark - Segue
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSString *identifier = segue.identifier;
+    if ([@"AnimRes" isEqualToString:identifier]) {
+        ResultViewController *controller = (ResultViewController *) segue.destinationViewController;
+        controller.names = self.names;
+        controller.cnames = self.cnames;
+        controller.row = self.raw;
+    }
 }
 
 #pragma mark - getter
 - (MBProgressHUD *) hud
 {
-    if (_hud) {
+    if (!_hud) {
         _hud = [[MBProgressHUD alloc] initWithView:self.view];
+        _hud.color = [UIColor clearColor];//这儿表示无背景
+        //显示的文字
+        _hud.labelText = @"Test";
+        //细节文字
+        _hud.detailsLabelText = @"Test detail";
+        //是否有庶罩
+        _hud.dimBackground = YES;
+        [self.navigationController.view addSubview:_hud];
     }
     return _hud;
 }

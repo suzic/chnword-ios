@@ -45,13 +45,32 @@
 /**
  *
  */
-+ (NSDictionary *) subListParam:(NSString *) opid userid:(NSString *) userid device:(NSString *) deviceId lists:(NSArray *) zoneList
++ (NSDictionary *) subListParam:(NSString *) opid userid:(NSString *) userid device:(NSString *) deviceId lists:(NSArray *) zoneList page:(int) page size:(int) size
 {
     NSDictionary *dict = @{@"opid":opid,
                            @"userid": userid,
                            @"device": deviceId,
                            @"param": @{
-                                   @"list": zoneList}
+                                   @"list": zoneList,
+                                   @"page": [NSString stringWithFormat:@"%d", page],
+                                   @"size": [NSString stringWithFormat:@"%d", size]}
+                           };
+    
+    return dict;
+}
+
+/**
+ *
+ */
++ (NSDictionary *) subListParam:(NSString *) opid userid:(NSString *) userid device:(NSString *) deviceId zone:(NSString *) zoneList page:(int) page size:(int) size
+{
+    NSDictionary *dict = @{@"opid":opid,
+                           @"userid": userid,
+                           @"device": deviceId,
+                           @"param": @{
+                                   @"list": zoneList,
+                                   @"page": [NSString stringWithFormat:@"%d", page],
+                                   @"size": [NSString stringWithFormat:@"%d", size]}
                            };
     
     return dict;

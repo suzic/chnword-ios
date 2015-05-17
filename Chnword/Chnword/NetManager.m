@@ -7,6 +7,7 @@
 //
 
 #import "NetManager.h"
+#import "NSObject+JSON.h"
 
 @implementation NetManager
 
@@ -23,7 +24,7 @@
     NSLog(@"%@", param);
     
     [manager POST:url parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
+        NSLog(@"%@", responseObject);
         if (success) {
             success(responseObject);
         }

@@ -10,4 +10,9 @@
 
 @interface ResultViewController : UIViewController
 
+@property (nonatomic, retain) NSArray *names;
+@property (nonatomic, retain) NSArray *cnames;
+@property (nonatomic, assign) NSInteger row;
+
+
 @end
