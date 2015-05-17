@@ -13,6 +13,8 @@
 
 @interface RegisterViewController ()
 
+@property (nonatomic, retain) IBOutlet UILabel *usercode;
+
 @end
 
 @implementation RegisterViewController
@@ -20,11 +22,44 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleKeyBoardStart:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleKeyboardEnd:) name:UIKeyboardDidHideNotification object:nil];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (void) handleKeyBoardStart:(NSNotification *) notification
+{
+    NSDictionary *userInfo = [notification userInfo];
+    
+    // Get the origin of the keyboard when it's displayed.
+    NSValue* aValue = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
+    
+    CGRect keyboardEndFrame = [aValue CGRectValue];
+    CGRect keyboardFrame = [self.view convertRect:keyboardEndFrame toView:nil];
+    
+    CGFloat keyboardHeight = keyboardFrame.size.height;
+    
+    CGRect rect = self.view.frame;
+    
+    rect.origin.y = - keyboardHeight;
+    self.view.frame = rect;
+    
+}
+
+- (void) handleKeyboardEnd:(NSNotification *) notification
+{
+    CGRect rect = self.view.frame;
+    rect.origin.y = 0;
+    rect.origin.x = 0;
+    self.view.frame = rect;
 }
 
 
@@ -111,6 +146,9 @@
  */
 - (IBAction) loginButtonClicked:(id)sender
 {
+    
+    
+    
     [self performSegueWithIdentifier:@"PushToMain" sender:nil];
 }
 

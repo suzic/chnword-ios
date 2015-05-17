@@ -8,7 +8,7 @@
 
 #import "GuideViewController.h"
 
-@interface GuideViewController ()
+@interface GuideViewController () <UIScrollViewDelegate>
 
 @property (nonatomic, retain) UIScrollView *scrollView;
 @property (nonatomic, retain) IBOutlet UIPageControl *pageControl;
@@ -35,6 +35,8 @@
     self.scrollView.contentSize = CGSizeMake(screen.bounds.size.width * 3, screen.bounds.size.height);
     self.scrollView.directionalLockEnabled = YES;
     self.scrollView.clipsToBounds = YES;
+    self.scrollView.bounces = NO;
+    self.scrollView.delegate = self;
     
     
     
@@ -111,5 +113,15 @@
     self.scrollView.contentOffset = CGPointMake(i * width, 0);
     
 }
-
+#pragma mark - UIScrollViewDelegate
+- (void) scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    CGRect screen = self.scrollView.frame;
+    float width = screen.size.width;
+    
+    int i = (int)(self.scrollView.contentOffset.x + 1) / width;
+    self.pageControl.currentPage = i;
+    
+    
+}
 @end
