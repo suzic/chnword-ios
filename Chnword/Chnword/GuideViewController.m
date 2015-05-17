@@ -13,6 +13,7 @@
 @property (nonatomic, retain) UIScrollView *scrollView;
 @property (nonatomic, retain) IBOutlet UIPageControl *pageControl;
 
+
 @end
 
 @implementation GuideViewController

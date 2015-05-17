@@ -13,7 +13,8 @@
 
 @interface RegisterViewController ()
 
-@property (nonatomic, retain) IBOutlet UILabel *usercode;
+@property (nonatomic, retain) IBOutlet UITextField *usercode;
+@property (nonatomic, assign) Rect viewRect;
 
 @end
 
@@ -49,7 +50,7 @@
     
     CGRect rect = self.view.frame;
     
-    rect.origin.y = - keyboardHeight;
+    rect.origin.y = - 70;
     self.view.frame = rect;
     
 }
@@ -151,5 +152,16 @@
     
     [self performSegueWithIdentifier:@"PushToMain" sender:nil];
 }
+
+/**
+ *  隐藏键盘
+ */
+- (IBAction) hiddenKeyBoard:(id)sender
+{
+    if ([self.usercode isFirstResponder] && [self.usercode canResignFirstResponder]) {
+        [self.usercode resignFirstResponder];
+    }
+}
+
 
 @end

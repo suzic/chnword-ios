@@ -113,7 +113,7 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" restorationIdentifier="new user" translatesAutoresizingMaskIntoConstraints="NO" id="nnd-H0-AbW" userLabel="new user" customClass="UIControl">
-                                <rect key="frame" x="0.0" y="254" width="600" height="50"/>
+                                <rect key="frame" x="0.0" y="255" width="600" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="试用" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tQ-jO-VFA">
                                         <rect key="frame" x="175" y="15" width="250" height="21"/>
@@ -137,9 +137,9 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d9s-6S-HhI">
-                                <rect key="frame" x="0.0" y="336" width="600" height="78"/>
+                                <rect key="frame" x="0.0" y="301" width="600" height="78"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WbN-Kv-Reu">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WbN-Kv-Reu" customClass="UIControl">
                                         <rect key="frame" x="140" y="14" width="320" height="50"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入用户码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PqT-Ah-naA">
@@ -168,6 +168,9 @@
                                             <constraint firstAttribute="centerY" secondItem="1yH-rS-Feq" secondAttribute="centerY" id="uVy-MK-2u7"/>
                                             <constraint firstAttribute="trailing" secondItem="1yH-rS-Feq" secondAttribute="trailing" constant="20" id="ylb-Mu-d5I"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="hiddenKeyBoard:" destination="YgQ-8w-f95" eventType="touchDown" id="TSn-3x-MLr"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -181,8 +184,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2fP-D3-bb2" firstAttribute="leading" secondItem="Iwg-fZ-pnd" secondAttribute="leading" id="5VJ-3s-J4G"/>
-                            <constraint firstAttribute="centerY" secondItem="nnd-H0-AbW" secondAttribute="centerY" constant="21" id="8E5-Jd-SBr"/>
-                            <constraint firstAttribute="centerY" secondItem="d9s-6S-HhI" secondAttribute="centerY" constant="-75" id="AF3-8j-bc4"/>
+                            <constraint firstAttribute="centerY" secondItem="nnd-H0-AbW" secondAttribute="centerY" constant="20" id="8E5-Jd-SBr"/>
+                            <constraint firstAttribute="centerY" secondItem="d9s-6S-HhI" secondAttribute="centerY" constant="-40" id="AF3-8j-bc4"/>
                             <constraint firstAttribute="centerX" secondItem="Tps-1O-Fna" secondAttribute="centerX" id="Huz-z8-jYo"/>
                             <constraint firstAttribute="bottom" secondItem="2fP-D3-bb2" secondAttribute="bottom" id="dFc-mN-dLD"/>
                             <constraint firstItem="d9s-6S-HhI" firstAttribute="leading" secondItem="Iwg-fZ-pnd" secondAttribute="leading" id="eXY-Bf-qaL"/>
@@ -196,6 +199,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="f23-Cj-JQ1"/>
                     <connections>
+                        <outlet property="usercode" destination="PqT-Ah-naA" id="J81-Cg-zi0"/>
                         <segue destination="Uks-Ql-kEf" kind="push" identifier="PushToMain" id="d84-q3-Rx4"/>
                     </connections>
                 </viewController>

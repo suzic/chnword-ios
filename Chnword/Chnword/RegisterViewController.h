@@ -19,4 +19,9 @@
  *  登录按钮点击
  */
 - (IBAction) loginButtonClicked:(id)sender;
+
+/**
+ *  隐藏键盘
+ */
+- (IBAction) hiddenKeyBoard:(id)sender;
 @end
