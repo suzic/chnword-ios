@@ -18,7 +18,6 @@
     NSData *body = [NSJSONSerialization dataWithJSONObject:self options:NSJSONWritingPrettyPrinted error:&error];
     
     if (error) {
-        DebugLog(@"Json Encode Error %@", error);
         return nil;
     }
     
@@ -32,7 +31,6 @@
     NSData *body = [NSJSONSerialization dataWithJSONObject:self options:NSJSONWritingPrettyPrinted error:&error];
     
     if (error) {
-        DebugLog(@"Json Encode Error %@", error);
         return nil;
     }
     
@@ -56,7 +54,6 @@
         id value = [NSJSONSerialization JSONObjectWithData:_data options:NSJSONReadingMutableContainers error:&error];
         
         if (error) {
-            DebugLog(@"Json Decode Error %@", error);
             return nil;
         }
         
