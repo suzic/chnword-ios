@@ -147,7 +147,20 @@
  */
 - (IBAction) loginButtonClicked:(id)sender
 {
+    NSString *opid = [Util generateUuid];
+    NSString *userid = self.usercode.text;
     
+    NSString *deviceId = [Util getUdid];
+    
+    NSString *url = @"http://app.3000zi.com/api/regist.php";
+    NSDictionary *param = [NetParamFactory registParam:opid userid:userid device:deviceId userCode:userid deviceId:deviceId session:@"sessionId" verify:@"verify"];
+    [NetManager postRequest:url param:param success:^(id json){
+        
+        NSLog(@"success with json: %@", json);
+        
+    }fail:^ (){
+        NSLog(@"fail ");
+    }];
     
     
     [self performSegueWithIdentifier:@"PushToMain" sender:nil];

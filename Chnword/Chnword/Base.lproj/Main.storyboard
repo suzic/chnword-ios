@@ -454,9 +454,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="eBc-Hu-DtO" firstAttribute="top" secondItem="OrJ-ot-YTa" secondAttribute="bottom" id="14T-IK-vLN"/>
                             <constraint firstAttribute="trailing" secondItem="eBc-Hu-DtO" secondAttribute="trailing" id="GXq-hb-lQQ"/>
                             <constraint firstItem="eBc-Hu-DtO" firstAttribute="leading" secondItem="vbX-by-RFJ" secondAttribute="leading" id="c8R-oU-uD0"/>
+                            <constraint firstItem="eBc-Hu-DtO" firstAttribute="top" secondItem="vbX-by-RFJ" secondAttribute="top" constant="20" id="e6k-Dr-I3q"/>
                             <constraint firstAttribute="bottom" secondItem="eBc-Hu-DtO" secondAttribute="bottom" id="kAH-hU-eKT"/>
                         </constraints>
                     </view>
