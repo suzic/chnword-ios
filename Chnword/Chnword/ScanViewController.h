@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import <TesseractOCR/TesseractOCR.h>
 
 
-@interface ScanViewController : UIViewController <AVCaptureMetadataOutputObjectsDelegate>
+@interface ScanViewController : UIViewController <G8TesseractDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 //@property (assign, nonatomic) ShowCardViewController* refViewController;
 
@@ -18,6 +19,12 @@
 
 
 @property (nonatomic, retain) IBOutlet UIImageView *qrCodeView;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageToRecognize;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
+- (IBAction)openCamera:(id)sender;
+- (IBAction)recognizeSampleImage:(id)sender;
 
 
 @end
