@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-chrnword-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-chrnword-Kiwi.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-chrnword-TesseractOCRiOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-chrnword.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>806D1B62DB9D5B1AB0290FA6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9EAC6748034F4C6E08F779DB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BDD44E069BD88E9F0A0F8854</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D661DAEFDB3657FD7F3007BB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
