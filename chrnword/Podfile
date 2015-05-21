@@ -8,7 +8,5 @@ target 'chrnword' do
 
 end
 
-target 'chrnwordTests' do
 
-end
 
