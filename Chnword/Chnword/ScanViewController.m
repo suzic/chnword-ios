@@ -44,6 +44,9 @@
     [super viewWillDisappear:animated];
 }
 
+
+/*
+
 #pragma mark
 #pragma mark - UIInterfaceOrigation
 
@@ -74,7 +77,8 @@
     // you want Tesseract to use in the "tessdata" folder in the root of the
     // project AND that the "tessdata" folder is a referenced folder and NOT
     // a symbolic group in your project
-    G8RecognitionOperation *operation = [[G8RecognitionOperation alloc] initWithLanguage:@"chi_sim"];
+//    G8RecognitionOperation *operation = [[G8RecognitionOperation alloc] initWithLanguage:@"chi_sim"];
+    G8RecognitionOperation *operation = [[G8RecognitionOperation alloc] initWithLanguage:@"en"];
     
     // Use the original Tesseract engine mode in performing the recognition
     // (see G8Constants.h) for other engine mode options
@@ -134,15 +138,7 @@
     NSLog(@"progress: %lu", (unsigned long)tesseract.progress);
 }
 
-/**
- *  This function is part of Tesseract's delegate. It will be called
- *  periodically as the recognition happens so you can cancel the recogntion
- *  prematurely if necessary.
- *
- *  @param tesseract The `G8Tesseract` object performing the recognition.
- *
- *  @return Whether or not to cancel the recognition.
- */
+
 - (BOOL)shouldCancelImageRecognitionForTesseract:(G8Tesseract *)tesseract {
     return NO;  // return YES, if you need to cancel recognition prematurely
 }
@@ -156,7 +152,7 @@
     [G8Tesseract clearCache];
 }
 
-
+*/
 
 
 @end

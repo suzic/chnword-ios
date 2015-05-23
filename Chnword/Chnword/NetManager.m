@@ -17,6 +17,7 @@
     
     //申明返回的结果是json类型
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
+//    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     //申明请求的数据是json类型
     manager.requestSerializer=[AFJSONRequestSerializer serializer];
     //如果报接受类型不一致请替换一致text/html或别的
@@ -24,10 +25,24 @@
     NSLog(@"%@", param);
     
     [manager POST:url parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        //调试使用
+//        NSError *error;
+//        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableLeaves error:&error];
+//        NSLog(@"dict %@", dict);
+        
         NSLog(@"%@", responseObject);
+        NSLog ( @"operation: %@" , operation.responseString);
         if (success) {
             success(responseObject);
+            //调试使用
+//            success(dict);
         }
+        
+        
+
+        
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@", error);
         if (fail) {

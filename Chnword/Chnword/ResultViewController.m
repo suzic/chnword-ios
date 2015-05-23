@@ -62,6 +62,7 @@
         //        NSDictionary *dict = [json jsonValue];
         NSDictionary *dict = json;
         NSString *result = [dict objectForKey:@"result"];
+        [self.hud hide:YES];
         if (result && [result isEqualToString:@"1"]) {
             
             NSDictionary *data = [dict objectForKey:@"data"];

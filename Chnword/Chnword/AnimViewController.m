@@ -51,6 +51,8 @@
 //        NSDictionary *dict = [json jsonValue];
         NSDictionary *dict = json;
         NSString *result = [dict objectForKey:@"result"];
+        [self.hud hide:YES];
+        
         if (result && [result isEqualToString:@"1"]) {
             
             NSDictionary *data = [dict objectForKey:@"data"];
@@ -61,7 +63,7 @@
             
             
         }else {
-            [self.hud hide:YES];
+            
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"网络参数不对" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
             [alert show];
         }

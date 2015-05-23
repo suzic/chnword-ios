@@ -90,16 +90,6 @@
 		A7A98CC11B06ED2500A1176D /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A98CAE1B06ED2500A1176D /* UIProgressView+AFNetworking.m */; };
 		A7A98CC21B06ED2500A1176D /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A98CB01B06ED2500A1176D /* UIRefreshControl+AFNetworking.m */; };
 		A7A98CC31B06ED2500A1176D /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A98CB21B06ED2500A1176D /* UIWebView+AFNetworking.m */; };
-		A7AB1B261B0B77BF00739B8C /* chi_sim.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = A7AB1B1C1B0B77BF00739B8C /* chi_sim.traineddata */; };
-		A7AB1B271B0B77BF00739B8C /* eng.cube.bigrams in Resources */ = {isa = PBXBuildFile; fileRef = A7AB1B1D1B0B77BF00739B8C /* eng.cube.bigrams */; };
-		A7AB1B281B0B77BF00739B8C /* eng.cube.fold in Resources */ = {isa = PBXBuildFile; fileRef = A7AB1B1E1B0B77BF00739B8C /* eng.cube.fold */; };
-		A7AB1B291B0B77BF00739B8C /* eng.cube.lm in Sources */ = {isa = PBXBuildFile; fileRef = A7AB1B1F1B0B77BF00739B8C /* eng.cube.lm */; };
-		A7AB1B2A1B0B77BF00739B8C /* eng.cube.nn in Resources */ = {isa = PBXBuildFile; fileRef = A7AB1B201B0B77BF00739B8C /* eng.cube.nn */; };
-		A7AB1B2B1B0B77BF00739B8C /* eng.cube.params in Resources */ = {isa = PBXBuildFile; fileRef = A7AB1B211B0B77BF00739B8C /* eng.cube.params */; };
-		A7AB1B2C1B0B77BF00739B8C /* eng.cube.size in Resources */ = {isa = PBXBuildFile; fileRef = A7AB1B221B0B77BF00739B8C /* eng.cube.size */; };
-		A7AB1B2D1B0B77BF00739B8C /* eng.cube.word-freq in Resources */ = {isa = PBXBuildFile; fileRef = A7AB1B231B0B77BF00739B8C /* eng.cube.word-freq */; };
-		A7AB1B2E1B0B77BF00739B8C /* eng.tesseract_cube.nn in Resources */ = {isa = PBXBuildFile; fileRef = A7AB1B241B0B77BF00739B8C /* eng.tesseract_cube.nn */; };
-		A7AB1B2F1B0B77BF00739B8C /* eng.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = A7AB1B251B0B77BF00739B8C /* eng.traineddata */; };
 		A7AB1B311B0B7A8400739B8C /* image_sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A7AB1B301B0B7A8400739B8C /* image_sample.jpg */; };
 		A7E14C641AF6646D00018386 /* ModelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E14C631AF6646D00018386 /* ModelTableViewCell.m */; };
 		A7E14C671AF664D300018386 /* FontCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E14C661AF664D300018386 /* FontCollectionViewCell.m */; };
@@ -247,16 +237,6 @@
 		A7A98CB01B06ED2500A1176D /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		A7A98CB11B06ED2500A1176D /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		A7A98CB21B06ED2500A1176D /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
-		A7AB1B1C1B0B77BF00739B8C /* chi_sim.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = chi_sim.traineddata; sourceTree = "<group>"; };
-		A7AB1B1D1B0B77BF00739B8C /* eng.cube.bigrams */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = eng.cube.bigrams; sourceTree = "<group>"; };
-		A7AB1B1E1B0B77BF00739B8C /* eng.cube.fold */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = eng.cube.fold; sourceTree = "<group>"; };
-		A7AB1B1F1B0B77BF00739B8C /* eng.cube.lm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; path = eng.cube.lm; sourceTree = "<group>"; };
-		A7AB1B201B0B77BF00739B8C /* eng.cube.nn */ = {isa = PBXFileReference; lastKnownFileType = file; path = eng.cube.nn; sourceTree = "<group>"; };
-		A7AB1B211B0B77BF00739B8C /* eng.cube.params */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = eng.cube.params; sourceTree = "<group>"; };
-		A7AB1B221B0B77BF00739B8C /* eng.cube.size */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = eng.cube.size; sourceTree = "<group>"; };
-		A7AB1B231B0B77BF00739B8C /* eng.cube.word-freq */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "eng.cube.word-freq"; sourceTree = "<group>"; };
-		A7AB1B241B0B77BF00739B8C /* eng.tesseract_cube.nn */ = {isa = PBXFileReference; lastKnownFileType = file; path = eng.tesseract_cube.nn; sourceTree = "<group>"; };
-		A7AB1B251B0B77BF00739B8C /* eng.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = eng.traineddata; sourceTree = "<group>"; };
 		A7AB1B301B0B7A8400739B8C /* image_sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_sample.jpg; sourceTree = "<group>"; };
 		A7DD18DC1AF916BB00F4FE21 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A7E14C621AF6646D00018386 /* ModelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelTableViewCell.h; sourceTree = "<group>"; };
@@ -436,7 +416,6 @@
 		A78F9F461AED36C700F6CE9C = {
 			isa = PBXGroup;
 			children = (
-				A7AB1B1B1B0B77BF00739B8C /* tessdata */,
 				A7A98C8B1B06ED2500A1176D /* libs */,
 				A78F382E1AFDA25E002A6F25 /* util */,
 				A70462391AF7ABD1005F2FE8 /* Frameworks */,
@@ -599,24 +578,6 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
-		A7AB1B1B1B0B77BF00739B8C /* tessdata */ = {
-			isa = PBXGroup;
-			children = (
-				A7AB1B1C1B0B77BF00739B8C /* chi_sim.traineddata */,
-				A7AB1B1D1B0B77BF00739B8C /* eng.cube.bigrams */,
-				A7AB1B1E1B0B77BF00739B8C /* eng.cube.fold */,
-				A7AB1B1F1B0B77BF00739B8C /* eng.cube.lm */,
-				A7AB1B201B0B77BF00739B8C /* eng.cube.nn */,
-				A7AB1B211B0B77BF00739B8C /* eng.cube.params */,
-				A7AB1B221B0B77BF00739B8C /* eng.cube.size */,
-				A7AB1B231B0B77BF00739B8C /* eng.cube.word-freq */,
-				A7AB1B241B0B77BF00739B8C /* eng.tesseract_cube.nn */,
-				A7AB1B251B0B77BF00739B8C /* eng.traineddata */,
-			);
-			name = tessdata;
-			path = Chnword/tessdata;
-			sourceTree = SOURCE_ROOT;
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -682,32 +643,23 @@
 				A78F38601AFDA26E002A6F25 /* xiaohei_big.jpg in Resources */,
 				A78F38501AFDA26E002A6F25 /* guide_1.png in Resources */,
 				A78F384A1AFDA26E002A6F25 /* btn_start.png in Resources */,
-				A7AB1B2C1B0B77BF00739B8C /* eng.cube.size in Resources */,
 				A78F38561AFDA26E002A6F25 /* index.png in Resources */,
-				A7AB1B2B1B0B77BF00739B8C /* eng.cube.params in Resources */,
 				A78F384F1AFDA26E002A6F25 /* flag_yellow.png in Resources */,
-				A7AB1B2A1B0B77BF00739B8C /* eng.cube.nn in Resources */,
-				A7AB1B2D1B0B77BF00739B8C /* eng.cube.word-freq in Resources */,
 				A7AB1B311B0B7A8400739B8C /* image_sample.jpg in Resources */,
 				A78F384E1AFDA26E002A6F25 /* flag_red.png in Resources */,
 				A78F385F1AFDA26E002A6F25 /* splash.png in Resources */,
 				A78F38621AFDAFB5002A6F25 /* qrcode.jpg in Resources */,
 				A78F385A1AFDA26E002A6F25 /* item_shop.png in Resources */,
-				A7AB1B2E1B0B77BF00739B8C /* eng.tesseract_cube.nn in Resources */,
 				A78F38521AFDA26E002A6F25 /* guide_3.png in Resources */,
-				A7AB1B271B0B77BF00739B8C /* eng.cube.bigrams in Resources */,
 				A78F384B1AFDA26E002A6F25 /* flag_blue.png in Resources */,
 				A78F385C1AFDA26E002A6F25 /* round_back.png in Resources */,
 				A78F385B1AFDA26E002A6F25 /* item_user.png in Resources */,
 				A78F38531AFDA26E002A6F25 /* icon1_03.png in Resources */,
-				A7AB1B2F1B0B77BF00739B8C /* eng.traineddata in Resources */,
-				A7AB1B261B0B77BF00739B8C /* chi_sim.traineddata in Resources */,
 				A78F38581AFDA26E002A6F25 /* inon_lock.png in Resources */,
 				A78F9F631AED36C700F6CE9C /* LaunchScreen.xib in Resources */,
 				A78F9F601AED36C700F6CE9C /* Images.xcassets in Resources */,
 				A78F38541AFDA26E002A6F25 /* img_search.png in Resources */,
 				A78F38511AFDA26E002A6F25 /* guide_2.png in Resources */,
-				A7AB1B281B0B77BF00739B8C /* eng.cube.fold in Resources */,
 				A78F385E1AFDA26E002A6F25 /* scan_line.png in Resources */,
 				A78F38571AFDA26E002A6F25 /* index_back.png in Resources */,
 				A78F384D1AFDA26E002A6F25 /* flag_grey.png in Resources */,
@@ -747,7 +699,6 @@
 				A78F9F7E1AEE685900F6CE9C /* GuideViewController.m in Sources */,
 				A7A98CC21B06ED2500A1176D /* UIRefreshControl+AFNetworking.m in Sources */,
 				A7A98CBA1B06ED2500A1176D /* AFURLResponseSerialization.m in Sources */,
-				A7AB1B291B0B77BF00739B8C /* eng.cube.lm in Sources */,
 				A7A98CB41B06ED2500A1176D /* AFHTTPRequestOperationManager.m in Sources */,
 				A7A98CB31B06ED2500A1176D /* AFHTTPRequestOperation.m in Sources */,
 				A78F9F931AEE6ABF00F6CE9C /* ScanViewController.m in Sources */,
