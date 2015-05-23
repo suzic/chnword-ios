@@ -72,7 +72,6 @@
 		A7AB3C141B0CE10E0021A88C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AB3C131B0CE10E0021A88C /* SystemConfiguration.framework */; };
 		A7AB3C161B0CE1190021A88C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AB3C151B0CE1190021A88C /* CoreTelephony.framework */; };
 		A7AB3C181B0CE1250021A88C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AB3C171B0CE1250021A88C /* MobileCoreServices.framework */; };
-		A7AB3C1A1B0CE13B0021A88C /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AB3C191B0CE13B0021A88C /* libicucore.dylib */; };
 		A7AB3C1C1B0CE1460021A88C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AB3C1B1B0CE1460021A88C /* MessageUI.framework */; };
 		A7AB3C1E1B0CE14E0021A88C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7AB3C1D1B0CE14E0021A88C /* Foundation.framework */; };
 		DFBBCEB437B7573AD0206F00 /* libPods-chrnword.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D702C08F01F4F8A1909725 /* libPods-chrnword.a */; };
@@ -92,8 +91,6 @@
 		A77A10D21B0CD2C600035743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A77A10D41B0CD2C600035743 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A77A10D71B0CD2C600035743 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		A77A10E21B0CD2C600035743 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A77A10E31B0CD2C600035743 /* chrnwordTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chrnwordTests.m; sourceTree = "<group>"; };
 		A7AB3AB61B0CDEB00021A88C /* btn_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_start.png; sourceTree = "<group>"; };
 		A7AB3AB71B0CDEB00021A88C /* flag_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag_blue.png; sourceTree = "<group>"; };
 		A7AB3AB81B0CDEB00021A88C /* flag_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag_green.png; sourceTree = "<group>"; };
@@ -201,7 +198,6 @@
 			files = (
 				A7AB3C1E1B0CE14E0021A88C /* Foundation.framework in Frameworks */,
 				A7AB3C1C1B0CE1460021A88C /* MessageUI.framework in Frameworks */,
-				A7AB3C1A1B0CE13B0021A88C /* libicucore.dylib in Frameworks */,
 				A7AB3C181B0CE1250021A88C /* MobileCoreServices.framework in Frameworks */,
 				A7AB3C161B0CE1190021A88C /* CoreTelephony.framework in Frameworks */,
 				A7AB3C141B0CE10E0021A88C /* SystemConfiguration.framework in Frameworks */,
@@ -256,7 +252,6 @@
 				A7AB3AE81B0CDEE50021A88C /* libs */,
 				A7AB3AB51B0CDEB00021A88C /* Resource */,
 				A77A10C61B0CD2C500035743 /* chrnword */,
-				A77A10E01B0CD2C600035743 /* chrnwordTests */,
 				A77A10C51B0CD2C500035743 /* Products */,
 				2F0E3A0604B2172C581B867C /* Pods */,
 				97BCFD123F6332B1AE889ED0 /* Frameworks */,
@@ -294,23 +289,6 @@
 				A7AB3B881B0CDF7A0021A88C /* PrefixHeader.pch */,
 				A77A10C81B0CD2C500035743 /* Info.plist */,
 				A77A10C91B0CD2C500035743 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A77A10E01B0CD2C600035743 /* chrnwordTests */ = {
-			isa = PBXGroup;
-			children = (
-				A77A10E31B0CD2C600035743 /* chrnwordTests.m */,
-				A77A10E11B0CD2C600035743 /* Supporting Files */,
-			);
-			path = chrnwordTests;
-			sourceTree = "<group>";
-		};
-		A77A10E11B0CD2C600035743 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A77A10E21B0CD2C600035743 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -783,6 +761,7 @@
 					XCTest,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -829,6 +808,7 @@
 					XCTest,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
