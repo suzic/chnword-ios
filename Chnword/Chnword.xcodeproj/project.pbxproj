@@ -29,6 +29,7 @@
 		A72D73691B085D570013E735 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A72D73591B085D570013E735 /* MBProgressHUD.m */; };
 		A72D736A1B085D570013E735 /* libSDWebImage_universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A72D73681B085D570013E735 /* libSDWebImage_universal.a */; };
 		A72D736D1B0865480013E735 /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A72D736C1B0865480013E735 /* NSObject+JSON.m */; };
+		A75FAA8B1B11A1D400B33C5E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A75FAA8A1B11A1D400B33C5E /* MediaPlayer.framework */; };
 		A771C3961B00FF6700351A11 /* AfnewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A771C3951B00FF6700351A11 /* AfnewDemo.m */; };
 		A778C4831AEFD8E80058185F /* PageViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A778C4821AEFD8E80058185F /* PageViewTableViewCell.m */; };
 		A778C4861AF11BC90058185F /* StoreViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A778C4851AF11BC90058185F /* StoreViewTableViewCell.m */; };
@@ -136,6 +137,7 @@
 		A72D73681B085D570013E735 /* libSDWebImage_universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSDWebImage_universal.a; sourceTree = "<group>"; };
 		A72D736B1B0865480013E735 /* NSObject+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSON.h"; sourceTree = "<group>"; };
 		A72D736C1B0865480013E735 /* NSObject+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSON.m"; sourceTree = "<group>"; };
+		A75FAA8A1B11A1D400B33C5E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		A771C3941B00FF6700351A11 /* AfnewDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfnewDemo.h; sourceTree = "<group>"; };
 		A771C3951B00FF6700351A11 /* AfnewDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfnewDemo.m; sourceTree = "<group>"; };
 		A778C4811AEFD8E80058185F /* PageViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewTableViewCell.h; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A75FAA8B1B11A1D400B33C5E /* MediaPlayer.framework in Frameworks */,
 				A70462691AF7B2D1005F2FE8 /* Foundation.framework in Frameworks */,
 				A70462471AF7AC5A005F2FE8 /* MessageUI.framework in Frameworks */,
 				A70462511AF7ACEE005F2FE8 /* libicucore.dylib in Frameworks */,
@@ -274,6 +277,7 @@
 		A70462391AF7ABD1005F2FE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A75FAA8A1B11A1D400B33C5E /* MediaPlayer.framework */,
 				A7DD18DC1AF916BB00F4FE21 /* CoreLocation.framework */,
 				A70462681AF7B2D1005F2FE8 /* Foundation.framework */,
 				A70462501AF7ACEE005F2FE8 /* libicucore.dylib */,

@@ -12,6 +12,7 @@
 #import "MBProgressHUD.h"
 #import "Util.h"
 #import "DisplayMovieViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface ResultViewController () <UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -22,6 +23,8 @@
 @property (nonatomic, retain) NSArray *wordNames;
 @property (nonatomic, retain) NSArray *wordIndexs;
 @property (nonatomic, retain) NSString *currentWordCode;
+
+@property (nonatomic, retain) MPMoviePlayerController *mediaPlayer;
 
 @end
 
@@ -67,9 +70,13 @@
             
             NSDictionary *data = [dict objectForKey:@"data"];
             
-            self.wordNames = [data objectForKey:@"word_name"];
-            self.wordIndexs = [data objectForKey:@"word_index"];
-            
+            if (data) {
+//                self.wordNames = [data objectForKey:@"word_name"];
+//                self.wordIndexs = [data objectForKey:@"word_index"];
+                self.wordNames = [data objectForKey:@"word"];
+                self.wordIndexs = [data objectForKey:@"unicode"];
+
+            }
             
             [self.collectionView reloadData];
             
@@ -146,8 +153,57 @@
 {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
     
-    self.currentWordCode = [self.wordIndexs objectAtIndex:indexPath.row];
-    [self performSegueWithIdentifier:@"DisplayMovie" sender:nil];
+//    self.currentWordCode = [self.wordIndexs objectAtIndex:indexPath.row];
+//    [self performSegueWithIdentifier:@"DisplayMovie" sender:nil];
+    
+    
+//    NSString *url = @"http://app.3000zi.com/api/word.php";
+//    NSDictionary *param = [NetParamFactory wordParam:opid userid:userid device:deviceId word:@"王"];
+    NSDictionary *param = [NetParamFactory wordParam:[Util generateUuid] userid:@"1" device:@"1" word:@"1"];
+    
+    [self.hud show:YES];
+    [NetManager postRequest:URL_SHOW param:param success:^(id json){
+        
+        NSLog(@"success with json: %@", json);
+        NSDictionary *dict = json;
+        
+        [self.hud hide:YES];
+        
+        if (dict) {
+            NSString *result = [dict objectForKey:@"result"];
+            
+            if ([result isEqualToString:@"1"]) {
+                NSDictionary *data = [dict objectForKey:@"data"];
+                
+                NSString *videoUrl = [data objectForKey:@"video"];
+//                self.mediaPlayer.contentURL = [NSURL URLWithString:videoUrl];
+//                [self.mediaPlayer play];
+                
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:videoUrl delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+                [alert show];
+
+            }else {
+                
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"网络请求失败" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+                [alert show];
+            }
+            
+            
+        } else {
+            [self.hud hide:YES];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"网络请求失败" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+            [alert show];
+        }
+        
+    }fail:^ (){
+        NSLog(@"fail ");
+        [self.hud hide:YES];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"网络请求失败" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        [alert show];
+    }];
+
+    
+    
 }
 
 
@@ -178,4 +234,38 @@
     return _hud;
 }
 
+- (MPMoviePlayerController *) mediaPlayer
+{
+    if (!_mediaPlayer) {
+        _mediaPlayer = [[MPMoviePlayerController alloc] init];
+        _mediaPlayer.controlStyle = MPMovieControlStyleFullscreen;
+        [_mediaPlayer.view setFrame:self.view.bounds];
+        _mediaPlayer.initialPlaybackTime = -1;
+        [self.view addSubview:_mediaPlayer.view];
+        // 注册一个播放结束的通知
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(myMovieFinishedCallback:)
+                                                     name:MPMoviePlayerPlaybackDidFinishNotification
+                                                   object:_mediaPlayer];
+    }
+    return _mediaPlayer;
+}
+
+
+#pragma mark -------------------视频播放结束委托--------------------
+
+/*
+ @method 当视频播放完毕释放对象
+ */
+-(void)myMovieFinishedCallback:(NSNotification*)notify
+{
+    //视频播放对象
+    MPMoviePlayerController* theMovie = [notify object];
+    //销毁播放通知
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:MPMoviePlayerPlaybackDidFinishNotification
+                                                  object:theMovie];
+    [theMovie.view removeFromSuperview];
+    // 释放视频对象
+}
 @end

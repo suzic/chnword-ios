@@ -98,15 +98,6 @@
 //        NSLog(@"fail ");
 //    }];
 
-//    NSString *url = @"http://app.3000zi.com/api/word.php";
-//    NSDictionary *param = [NetParamFactory wordParam:opid userid:userid device:deviceId word:@"王"];
-//    [NetManager postRequest:url param:param success:^(id json){
-//        
-//        NSLog(@"success with json: %@", json);
-//        
-//    }fail:^ (){
-//        NSLog(@"fail ");
-//    }];
     
     NSString *url = @"http://app.3000zi.com/api/show.php";
     NSDictionary *param = [NetParamFactory showParam:opid userid:@"1" device:@"1" wordCode:@"1"];

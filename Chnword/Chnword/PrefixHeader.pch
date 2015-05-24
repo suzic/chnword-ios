@@ -39,10 +39,10 @@
 #define URL_BASE @"http://app.3000zi.com/api"
 #define URL_VERIFY  [NSString stringWithFormat:@"%@/%@", URL_BASE, @"verify.php"]
 #define URL_LIST    [NSString stringWithFormat:@"%@/%@", URL_BASE, @"list.php" ]
-#define URL_SUBLIST [NSString stringWithFormat:@"%@/%@", URL_BASE, @"sublist"]
-#define URL_WORD    [NSString stringWithFormat:@"%@/%@", URL_BASE, @"word"]
-#define URL_SHOW    [NSString stringWithFormat:@"%@/%@", URL_BASE, @"show"]
-#define URL_REGIST  [NSString stringWithFormat:@"%@/%@", URL_BASE, @"regist"]
+#define URL_SUBLIST [NSString stringWithFormat:@"%@/%@", URL_BASE, @"sublist.php"]
+#define URL_WORD    [NSString stringWithFormat:@"%@/%@", URL_BASE, @"word.php"]
+#define URL_SHOW    [NSString stringWithFormat:@"%@/%@", URL_BASE, @"show.php"]
+#define URL_REGIST  [NSString stringWithFormat:@"%@/%@", URL_BASE, @"regist.php"]
 
 
 #endif
