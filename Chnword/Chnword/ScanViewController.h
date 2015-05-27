@@ -8,12 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
-//#import <TesseractOCR/TesseractOCR.h>
+#import <TesseractOCR/TesseractOCR.h>
 
 
-@interface ScanViewController : UIViewController
-
-//<G8TesseractDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface ScanViewController : UIViewController <G8TesseractDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 //@property (assign, nonatomic) ShowCardViewController* refViewController;
 

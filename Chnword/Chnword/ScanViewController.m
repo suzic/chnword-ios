@@ -23,11 +23,7 @@
     [super viewDidLoad];
     
     self.operationQueue = [[NSOperationQueue alloc] init];
-}
-
-- (void) viewWillAppear:(BOOL)animated{
     
-    [super viewWillAppear:animated];
     UIImagePickerController *imgPicker = [UIImagePickerController new];
     imgPicker.delegate = self;
     
@@ -36,6 +32,13 @@
         imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
         [self presentViewController:imgPicker animated:YES completion:nil];
     }
+    
+}
+
+- (void) viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+    
     
     
 }

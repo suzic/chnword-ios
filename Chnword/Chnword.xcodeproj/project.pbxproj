@@ -416,10 +416,10 @@
 			children = (
 				A7A98C8B1B06ED2500A1176D /* libs */,
 				A78F382E1AFDA25E002A6F25 /* util */,
-				A70462391AF7ABD1005F2FE8 /* Frameworks */,
 				A78F9F511AED36C700F6CE9C /* Chnword */,
 				A78F9F501AED36C700F6CE9C /* Products */,
 				953B960A1FA8492D68C63CF1 /* Pods */,
+				A70462391AF7ABD1005F2FE8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
