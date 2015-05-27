@@ -7,6 +7,7 @@
 //
 
 #import "Util.h"
+#import "CHKeychain.h"
 
 @implementation Util
 
@@ -23,6 +24,23 @@
 
 + (NSString *) getUdid
 {
-    return [UIDevice currentDevice].identifierForVendor.UUIDString;
+    static NSString *securyKey = @"com.chnword.chnword.SecuryKey";
+    static NSString *securyKeyID = @"com.chnword.chnword.SecuryKey.DEVICEID";
+    
+    NSDictionary *dict = [CHKeychain load:securyKey];
+    
+    if (dict) {
+        NSString *udid = [dict objectForKey:securyKey];
+        if (udid) {
+            return udid;
+        }
+    }
+    NSString *udid = [self generateUuid];
+    NSMutableDictionary *store = [NSMutableDictionary dictionary];
+    [store setObject:udid forKey:securyKeyID];
+    [CHKeychain save:securyKey data:store];
+    
+    
+    return udid;
 }
 @end

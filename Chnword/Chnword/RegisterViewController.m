@@ -46,7 +46,7 @@
     CGRect keyboardEndFrame = [aValue CGRectValue];
     CGRect keyboardFrame = [self.view convertRect:keyboardEndFrame toView:nil];
     
-    CGFloat keyboardHeight = keyboardFrame.size.height;
+//    CGFloat keyboardHeight = keyboardFrame.size.height;
     
     CGRect rect = self.view.frame;
     
@@ -99,16 +99,16 @@
 //    }];
 
     
-    NSString *url = @"http://app.3000zi.com/api/show.php";
-    NSDictionary *param = [NetParamFactory showParam:opid userid:@"1" device:@"1" wordCode:@"1"];
-    
-    [NetManager postRequest:url param:param success:^(id json){
-        
-        NSLog(@"success with json: %@", json);
-        
-    }fail:^ (){
-        NSLog(@"fail ");
-    }];
+//    NSString *url = @"http://app.3000zi.com/api/show.php";
+//    NSDictionary *param = [NetParamFactory showParam:opid userid:@"1" device:@"1" wordCode:@"1"];
+//    
+//    [NetManager postRequest:url param:param success:^(id json){
+//        
+//        NSLog(@"success with json: %@", json);
+//        
+//    }fail:^ (){
+//        NSLog(@"fail ");
+//    }];
 
 //    NSString *url = @"http://app.3000zi.com/api/regist.php";
 //    NSDictionary *param = [NetParamFactory registParam:opid userid:userid device:deviceId userCode:@"usercode" deviceId:deviceId session:@"sessionId" verify:@"verify"];
@@ -120,7 +120,7 @@
 //        NSLog(@"fail ");
 //    }];
 
-    
+    [self performSegueWithIdentifier:@"PushToMain" sender:nil];
     
     
 }
@@ -135,9 +135,8 @@
     
     NSString *deviceId = [Util getUdid];
     
-    NSString *url = @"http://app.3000zi.com/api/regist.php";
     NSDictionary *param = [NetParamFactory registParam:opid userid:userid device:deviceId userCode:userid deviceId:deviceId session:@"sessionId" verify:@"verify"];
-    [NetManager postRequest:url param:param success:^(id json){
+    [NetManager postRequest:URL_REGIST param:param success:^(id json){
         
         NSLog(@"success with json: %@", json);
         
