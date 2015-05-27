@@ -9,18 +9,6 @@
 /* Begin PBXBuildFile section */
 		017970BBFA422B182FA11A1F /* libPods-Chnword.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 615CF8E98A4ECA8143E933F1 /* libPods-Chnword.a */; };
 		A70462381AF7AB39005F2FE8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70462371AF7AB39005F2FE8 /* AVFoundation.framework */; };
-		A704623B1AF7ABEC005F2FE8 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A704623A1AF7ABEC005F2FE8 /* libz.dylib */; };
-		A704623D1AF7ABFA005F2FE8 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A704623C1AF7ABFA005F2FE8 /* libstdc++.dylib */; };
-		A704623F1AF7AC09005F2FE8 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A704623E1AF7AC09005F2FE8 /* ImageIO.framework */; };
-		A70462411AF7AC1A005F2FE8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70462401AF7AC1A005F2FE8 /* Security.framework */; };
-		A70462431AF7AC35005F2FE8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70462421AF7AC35005F2FE8 /* QuartzCore.framework */; };
-		A70462451AF7AC4B005F2FE8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70462441AF7AC4A005F2FE8 /* AudioToolbox.framework */; };
-		A70462471AF7AC5A005F2FE8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70462461AF7AC5A005F2FE8 /* MessageUI.framework */; };
-		A70462491AF7AC6A005F2FE8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70462481AF7AC6A005F2FE8 /* CoreGraphics.framework */; };
-		A704624B1AF7AC89005F2FE8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A704624A1AF7AC89005F2FE8 /* SystemConfiguration.framework */; };
-		A704624D1AF7AC9F005F2FE8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A704624C1AF7AC9F005F2FE8 /* CoreTelephony.framework */; };
-		A704624F1AF7ACDC005F2FE8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A704624E1AF7ACDC005F2FE8 /* MobileCoreServices.framework */; };
-		A70462511AF7ACEE005F2FE8 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A70462501AF7ACEE005F2FE8 /* libicucore.dylib */; };
 		A70462691AF7B2D1005F2FE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70462681AF7B2D1005F2FE8 /* Foundation.framework */; };
 		A704627A1AF7C3FB005F2FE8 /* AnimCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A70462791AF7C3FB005F2FE8 /* AnimCollectionViewCell.m */; };
 		A7158E661B02D555006EB801 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7158E651B02D555006EB801 /* NetManager.m */; };
@@ -30,7 +18,8 @@
 		A72D73691B085D570013E735 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A72D73591B085D570013E735 /* MBProgressHUD.m */; };
 		A72D736A1B085D570013E735 /* libSDWebImage_universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A72D73681B085D570013E735 /* libSDWebImage_universal.a */; };
 		A72D736D1B0865480013E735 /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A72D736C1B0865480013E735 /* NSObject+JSON.m */; };
-		A75FAA8B1B11A1D400B33C5E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A75FAA8A1B11A1D400B33C5E /* MediaPlayer.framework */; };
+		A75202411B1607000054DB91 /* CHKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = A75202401B1607000054DB91 /* CHKeychain.m */; };
+		A75202421B16071B0054DB91 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70462401AF7AC1A005F2FE8 /* Security.framework */; };
 		A771C3961B00FF6700351A11 /* AfnewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A771C3951B00FF6700351A11 /* AfnewDemo.m */; };
 		A778C4831AEFD8E80058185F /* PageViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A778C4821AEFD8E80058185F /* PageViewTableViewCell.m */; };
 		A778C4861AF11BC90058185F /* StoreViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A778C4851AF11BC90058185F /* StoreViewTableViewCell.m */; };
@@ -98,6 +87,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		615CF8E98A4ECA8143E933F1 /* libPods-Chnword.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Chnword.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91E67091585392E3631D7238 /* Pods-Chnword.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chnword.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chnword/Pods-Chnword.debug.xcconfig"; sourceTree = "<group>"; };
 		A70462371AF7AB39005F2FE8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A704623A1AF7ABEC005F2FE8 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		A704623C1AF7ABFA005F2FE8 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
@@ -138,6 +129,8 @@
 		A72D73681B085D570013E735 /* libSDWebImage_universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSDWebImage_universal.a; sourceTree = "<group>"; };
 		A72D736B1B0865480013E735 /* NSObject+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSON.h"; sourceTree = "<group>"; };
 		A72D736C1B0865480013E735 /* NSObject+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSON.m"; sourceTree = "<group>"; };
+		A752023F1B1607000054DB91 /* CHKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHKeychain.h; sourceTree = "<group>"; };
+		A75202401B1607000054DB91 /* CHKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHKeychain.m; sourceTree = "<group>"; };
 		A75FAA8A1B11A1D400B33C5E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		A771C3941B00FF6700351A11 /* AfnewDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfnewDemo.h; sourceTree = "<group>"; };
 		A771C3951B00FF6700351A11 /* AfnewDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfnewDemo.m; sourceTree = "<group>"; };
@@ -244,6 +237,7 @@
 		A7E14C631AF6646D00018386 /* ModelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelTableViewCell.m; sourceTree = "<group>"; };
 		A7E14C651AF664D300018386 /* FontCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontCollectionViewCell.h; sourceTree = "<group>"; };
 		A7E14C661AF664D300018386 /* FontCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontCollectionViewCell.m; sourceTree = "<group>"; };
+		B837C8FC916D6C08B5EA3271 /* Pods-Chnword.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chnword.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chnword/Pods-Chnword.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,28 +245,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A75FAA8B1B11A1D400B33C5E /* MediaPlayer.framework in Frameworks */,
+				A75202421B16071B0054DB91 /* Security.framework in Frameworks */,
 				A70462691AF7B2D1005F2FE8 /* Foundation.framework in Frameworks */,
-				A70462471AF7AC5A005F2FE8 /* MessageUI.framework in Frameworks */,
-				A70462511AF7ACEE005F2FE8 /* libicucore.dylib in Frameworks */,
 				A72D736A1B085D570013E735 /* libSDWebImage_universal.a in Frameworks */,
-				A704624F1AF7ACDC005F2FE8 /* MobileCoreServices.framework in Frameworks */,
-				A704624D1AF7AC9F005F2FE8 /* CoreTelephony.framework in Frameworks */,
-				A704624B1AF7AC89005F2FE8 /* SystemConfiguration.framework in Frameworks */,
-				A70462491AF7AC6A005F2FE8 /* CoreGraphics.framework in Frameworks */,
-				A70462451AF7AC4B005F2FE8 /* AudioToolbox.framework in Frameworks */,
-				A70462431AF7AC35005F2FE8 /* QuartzCore.framework in Frameworks */,
-				A70462411AF7AC1A005F2FE8 /* Security.framework in Frameworks */,
-				A704623F1AF7AC09005F2FE8 /* ImageIO.framework in Frameworks */,
-				A704623D1AF7ABFA005F2FE8 /* libstdc++.dylib in Frameworks */,
-				A704623B1AF7ABEC005F2FE8 /* libz.dylib in Frameworks */,
 				A70462381AF7AB39005F2FE8 /* AVFoundation.framework in Frameworks */,
+				017970BBFA422B182FA11A1F /* libPods-Chnword.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		953B960A1FA8492D68C63CF1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				91E67091585392E3631D7238 /* Pods-Chnword.debug.xcconfig */,
+				B837C8FC916D6C08B5EA3271 /* Pods-Chnword.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A70462391AF7ABD1005F2FE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +284,7 @@
 				A704623C1AF7ABFA005F2FE8 /* libstdc++.dylib */,
 				A704623A1AF7ABEC005F2FE8 /* libz.dylib */,
 				A70462371AF7AB39005F2FE8 /* AVFoundation.framework */,
+				615CF8E98A4ECA8143E933F1 /* libPods-Chnword.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -379,6 +372,8 @@
 				A72D73551B084DDC0013E735 /* DataUtil.m */,
 				A72D736B1B0865480013E735 /* NSObject+JSON.h */,
 				A72D736C1B0865480013E735 /* NSObject+JSON.m */,
+				A752023F1B1607000054DB91 /* CHKeychain.h */,
+				A75202401B1607000054DB91 /* CHKeychain.m */,
 			);
 			name = util;
 			path = Chnword/util;
@@ -424,6 +419,7 @@
 				A70462391AF7ABD1005F2FE8 /* Frameworks */,
 				A78F9F511AED36C700F6CE9C /* Chnword */,
 				A78F9F501AED36C700F6CE9C /* Products */,
+				953B960A1FA8492D68C63CF1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -570,9 +566,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A78F9F721AED36C700F6CE9C /* Build configuration list for PBXNativeTarget "Chnword" */;
 			buildPhases = (
+				C967B5FC7F9FD664F55D9D9F /* Check Pods Manifest.lock */,
 				A78F9F4B1AED36C700F6CE9C /* Sources */,
 				A78F9F4C1AED36C700F6CE9C /* Frameworks */,
 				A78F9F4D1AED36C700F6CE9C /* Resources */,
+				CFCD6F3241A807A8CFEE38C8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -654,6 +652,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C967B5FC7F9FD664F55D9D9F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CFCD6F3241A807A8CFEE38C8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chnword/Pods-Chnword-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A78F9F4B1AED36C700F6CE9C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -697,6 +728,7 @@
 				A7A98CBC1B06ED2500A1176D /* AFNetworkActivityIndicatorManager.m in Sources */,
 				A78F9F7B1AEE684D00F6CE9C /* SplashViewController.m in Sources */,
 				A78F9F841AEE68C900F6CE9C /* PageViewController.m in Sources */,
+				A75202411B1607000054DB91 /* CHKeychain.m in Sources */,
 				A778C4831AEFD8E80058185F /* PageViewTableViewCell.m in Sources */,
 				A7A98CB91B06ED2500A1176D /* AFURLRequestSerialization.m in Sources */,
 				A78F9F961AEE6BB200F6CE9C /* ResultViewController.m in Sources */,
@@ -812,6 +844,7 @@
 		};
 		A78F9F731AED36C700F6CE9C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91E67091585392E3631D7238 /* Pods-Chnword.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					"$(ARCHS_STANDARD)",
@@ -840,7 +873,7 @@
 				);
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
@@ -849,6 +882,7 @@
 		};
 		A78F9F741AED36C700F6CE9C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B837C8FC916D6C08B5EA3271 /* Pods-Chnword.release.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					"$(ARCHS_STANDARD)",
@@ -877,7 +911,7 @@
 				);
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
