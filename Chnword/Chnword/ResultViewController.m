@@ -70,12 +70,14 @@
             
             NSDictionary *data = [dict objectForKey:@"data"];
             
-            if (data) {
+            if (data != NULL) {
 //                self.wordNames = [data objectForKey:@"word_name"];
 //                self.wordIndexs = [data objectForKey:@"word_index"];
                 self.wordNames = [data objectForKey:@"word"];
                 self.wordIndexs = [data objectForKey:@"unicode"];
 
+            } else  {
+                [self.hud hide:YES];
             }
             
             [self.collectionView reloadData];

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		017970BBFA422B182FA11A1F /* libPods-Chnword.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 615CF8E98A4ECA8143E933F1 /* libPods-Chnword.a */; };
 		A70462381AF7AB39005F2FE8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70462371AF7AB39005F2FE8 /* AVFoundation.framework */; };
 		A704623B1AF7ABEC005F2FE8 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A704623A1AF7ABEC005F2FE8 /* libz.dylib */; };
 		A704623D1AF7ABFA005F2FE8 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A704623C1AF7ABFA005F2FE8 /* libstdc++.dylib */; };
@@ -180,8 +181,6 @@
 		A78F9F5D1AED36C700F6CE9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A78F9F5F1AED36C700F6CE9C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A78F9F621AED36C700F6CE9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		A78F9F6D1AED36C700F6CE9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A78F9F6E1AED36C700F6CE9C /* ChnwordTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChnwordTests.m; sourceTree = "<group>"; };
 		A78F9F791AEE684D00F6CE9C /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
 		A78F9F7A1AEE684D00F6CE9C /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		A78F9F7C1AEE685900F6CE9C /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
@@ -424,7 +423,6 @@
 				A78F382E1AFDA25E002A6F25 /* util */,
 				A70462391AF7ABD1005F2FE8 /* Frameworks */,
 				A78F9F511AED36C700F6CE9C /* Chnword */,
-				A78F9F6B1AED36C700F6CE9C /* ChnwordTests */,
 				A78F9F501AED36C700F6CE9C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -461,23 +459,6 @@
 			children = (
 				A78F9F531AED36C700F6CE9C /* Info.plist */,
 				A78F9F541AED36C700F6CE9C /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A78F9F6B1AED36C700F6CE9C /* ChnwordTests */ = {
-			isa = PBXGroup;
-			children = (
-				A78F9F6E1AED36C700F6CE9C /* ChnwordTests.m */,
-				A78F9F6C1AED36C700F6CE9C /* Supporting Files */,
-			);
-			path = ChnwordTests;
-			sourceTree = "<group>";
-		};
-		A78F9F6C1AED36C700F6CE9C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A78F9F6D1AED36C700F6CE9C /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
