@@ -38,83 +38,86 @@
     [defaults synchronize];
 }
 
-/**
- *  为用户添加解锁条目
- * @param list nsarray集合
- */
-+ (void) addItemForUser:(NSString *) userCode item:(NSArray *) list
+// ----- default
++ (void) setDefaultModule:(NSArray *) modules
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    NSDictionary *dicts  = [defaults objectForKey:userCode];
-    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:dicts];
-    if (dict) {
-        NSString *str = [dict objectForKey:Submit_Code_ALL];
-        if (!str) {
-            [dict setObject:Submit_Code_None forKey:Submit_Code_ALL];
-            str = Submit_Code_None;
-        }
-        
-        //设置list中的数值
-        for (NSString *str in list) {
-            [dict setObject:Submit_Code_Till forKey:str];
-        }
-        
-        [defaults setObject:dict forKey:Submit_Code_List];
-        
-        
-        
-    } else {
-        NSMutableDictionary *adict = [[NSMutableDictionary alloc] init];
-        [adict setObject:Submit_Code_None forKey:Submit_Code_ALL];
-        
-        //设置list中的数值
-        for (NSString *str in list) {
-            [dict setObject:Submit_Code_Till forKey:str];
-        }
-        
-        [defaults setObject:adict forKey:userCode];
-        
-    }
+    [defaults setObject:modules forKey:@"DEFAULT_MODULE"];
     [defaults synchronize];
-
 }
 
-/**
- *  获得所有的用户
- */
-+ (NSArray *) getAllUser
++ (NSArray *) getDefaultModule
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    NSArray *users = [defaults objectForKey:Submit_Code_Key];
-    
-    return users;
-
-}
-
-/**
- *  获得指定用户下的解锁条目
- */
-+ (NSArray *) getListByUserCode:(NSString *) userCode
-{
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    NSDictionary *dict = [defaults objectForKey:userCode];
-    NSMutableArray *result = [NSMutableArray array];
-    if (dict) {
-        NSEnumerator * enumeratorKey = [dict keyEnumerator];
-        for (NSString *key in enumeratorKey) {
-            NSString *val = [dict objectForKey:key];
-            if ([val isEqualToString:Submit_Code_Till]) {
-                [result addObject:key];
-            }
-        }
-        
+    NSArray *arr = [defaults objectForKey:@"DEFAULT_MODULE"];
+    if (arr) {
+        return arr;
+    }else {
+        return [NSArray array];
     }
-    
-    return result;
+}
 
+
++ (void) setDefaultWord:(NSArray *) word forModule:(NSString *) moduleCode
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:word forKey:[NSString stringWithFormat:@"%@_DEFAULT_MODULE_WORDS", moduleCode]];
+    [defaults synchronize];
+}
+
+
++ (NSArray *) getDefaultWord:(NSString *) moduleCode
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSArray *words = [defaults objectForKey:[NSString stringWithFormat:@"%@_DEFAULT_MODULE_WORDS", moduleCode]];
+    if (words) {
+        return words;
+    } else {
+        return [NSArray array];
+    }
+}
+
+//----  users
++ (void) setDefaultModule:(NSArray *) modules forUser:(NSString *) userCode
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:modules forKey:[NSString stringWithFormat:@"%@_DEFAULT_MODULE", userCode]];
+    [defaults synchronize];
+    
+}
+
+
++ (NSArray *) getDefaultModule:(NSString *) userCode
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSArray *modules = [defaults objectForKey:[NSString stringWithFormat:@"%@_DEFAULT_MODULE", userCode]];
+    if (modules) {
+        return modules;
+    } else {
+        return [NSArray array];
+    }
+}
+
+
++ (void) setDefaultWord:(NSArray *) word forModule:(NSString *) moduleCode andUser:(NSString *) userCode
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:word forKey:[NSString stringWithFormat:@"%@_%@_MODULE_WORD", userCode, moduleCode]];
+    [defaults synchronize];
+    
+}
+
+
+
++ (NSArray *) getDefaultWord:(NSString *) moduleCode forUser:(NSString *) userCode
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSArray *words = [defaults objectForKey:[NSString stringWithFormat:@"%@_%@_MODULE_WORD", userCode, moduleCode]];
+    if (words) {
+        return words;
+    } else {
+        return [NSArray array];
+    }
 }
 
 @end

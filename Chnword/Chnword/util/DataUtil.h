@@ -15,20 +15,29 @@
  */
 + (void) addUser:(NSString *) userCode;
 
-/**
- *  为用户添加解锁条目
- */
-+ (void) addItemForUser:(NSString *) userCode item:(NSArray *) list;
+// ----- default
++ (void) setDefaultModule:(NSArray *) modules;
 
-/**
- *  获得所有的用户
- */
-+ (NSArray *) getAllUser;
++ (NSArray *) getDefaultModule;
 
-/**
- *  获得指定用户下的解锁条目
- */
-+ (NSArray *) getListByUserCode:(NSString *) userCode;
+
++ (void) setDefaultWord:(NSArray *) word forModule:(NSString *) moduleCode;
+
+
++ (NSArray *) getDefaultWord:(NSString *) moduleCode;
+
+//----  users
++ (void) setDefaultModule:(NSArray *) modules forUser:(NSString *) userCode;
+
+
++ (NSArray *) getDefaultModule:(NSString *) userCode;
+
+
++ (void) setDefaultWord:(NSArray *) word forModule:(NSString *) moduleCode andUser:(NSString *) userCode;
+
+
+
++ (NSArray *) getDefaultWord:(NSString *) moduleCode forUser:(NSString *) userCode;
 
 
 @end
