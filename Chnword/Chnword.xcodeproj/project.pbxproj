@@ -18,6 +18,7 @@
 		A72D73691B085D570013E735 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A72D73591B085D570013E735 /* MBProgressHUD.m */; };
 		A72D736A1B085D570013E735 /* libSDWebImage_universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A72D73681B085D570013E735 /* libSDWebImage_universal.a */; };
 		A72D736D1B0865480013E735 /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A72D736C1B0865480013E735 /* NSObject+JSON.m */; };
+		A74725DE1B1958220065E512 /* CoverFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = A74725DD1B1958220065E512 /* CoverFlowView.m */; };
 		A75202411B1607000054DB91 /* CHKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = A75202401B1607000054DB91 /* CHKeychain.m */; };
 		A75202421B16071B0054DB91 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70462401AF7AC1A005F2FE8 /* Security.framework */; };
 		A771C3961B00FF6700351A11 /* AfnewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A771C3951B00FF6700351A11 /* AfnewDemo.m */; };
@@ -129,6 +130,8 @@
 		A72D73681B085D570013E735 /* libSDWebImage_universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSDWebImage_universal.a; sourceTree = "<group>"; };
 		A72D736B1B0865480013E735 /* NSObject+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSON.h"; sourceTree = "<group>"; };
 		A72D736C1B0865480013E735 /* NSObject+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSON.m"; sourceTree = "<group>"; };
+		A74725DC1B1958220065E512 /* CoverFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverFlowView.h; sourceTree = "<group>"; };
+		A74725DD1B1958220065E512 /* CoverFlowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverFlowView.m; sourceTree = "<group>"; };
 		A752023F1B1607000054DB91 /* CHKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHKeychain.h; sourceTree = "<group>"; };
 		A75202401B1607000054DB91 /* CHKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHKeychain.m; sourceTree = "<group>"; };
 		A75FAA8A1B11A1D400B33C5E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -344,6 +347,15 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		A74725DB1B1958220065E512 /* coverflow */ = {
+			isa = PBXGroup;
+			children = (
+				A74725DC1B1958220065E512 /* CoverFlowView.h */,
+				A74725DD1B1958220065E512 /* CoverFlowView.m */,
+			);
+			path = coverflow;
+			sourceTree = "<group>";
+		};
 		A778C4801AEFD73D0058185F /* cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +504,7 @@
 		A7A98C8B1B06ED2500A1176D /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				A74725DB1B1958220065E512 /* coverflow */,
 				A72D73571B085D570013E735 /* MBProgressHUD */,
 				A72D735A1B085D570013E735 /* SDWebImage */,
 				A7A98C8C1B06ED2500A1176D /* afnetworking */,
@@ -715,6 +728,7 @@
 				A78F9F7E1AEE685900F6CE9C /* GuideViewController.m in Sources */,
 				A7A98CC21B06ED2500A1176D /* UIRefreshControl+AFNetworking.m in Sources */,
 				A7A98CBA1B06ED2500A1176D /* AFURLResponseSerialization.m in Sources */,
+				A74725DE1B1958220065E512 /* CoverFlowView.m in Sources */,
 				A7A98CB41B06ED2500A1176D /* AFHTTPRequestOperationManager.m in Sources */,
 				A7A98CB31B06ED2500A1176D /* AFHTTPRequestOperation.m in Sources */,
 				A78F9F931AEE6ABF00F6CE9C /* ScanViewController.m in Sources */,
