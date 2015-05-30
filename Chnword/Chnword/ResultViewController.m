@@ -125,6 +125,61 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    
+    NSString *opid = [Util generateUuid];
+    NSString *userid = @"userid";
+    NSString *deviceId = [Util getUdid];
+    
+    NSString *str = [self.cnames objectAtIndex:indexPath.row];
+    self.row = indexPath.row;
+    NSDictionary *param = [NetParamFactory subListParam:opid userid:userid device:deviceId zone:str page:0 size:0];
+    
+    
+    [self.hud show:YES];
+    
+    NSLog(@"%@", URL_SUBLIST);
+    
+    [NetManager postRequest:URL_SUBLIST param:param success:^(id json){
+        
+        //        NSDictionary *dict = [json jsonValue];
+        NSDictionary *dict = json;
+        NSString *result = [dict objectForKey:@"result"];
+        [self.hud hide:YES];
+        if (result && [result isEqualToString:@"1"]) {
+            
+            NSDictionary *data = [dict objectForKey:@"data"];
+            
+            if (data != NULL) {
+                //                self.wordNames = [data objectForKey:@"word_name"];
+                //                self.wordIndexs = [data objectForKey:@"word_index"];
+                self.wordNames = [data objectForKey:@"word"];
+                self.wordIndexs = [data objectForKey:@"unicode"];
+                
+            } else  {
+                [self.hud hide:YES];
+            }
+            
+            [self.collectionView reloadData];
+            
+            
+        }else {
+            [self.hud hide:YES];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"网络参数不对" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+            [alert show];
+        }
+        
+        
+    }fail:^ (){
+        NSLog(@"fail ");
+        
+        [self.hud hide:YES];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"网络参数不对" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        [alert show];
+        
+    }];
+    
+    
 }
 
 
@@ -178,6 +233,7 @@
                 NSDictionary *data = [dict objectForKey:@"data"];
                 
                 NSString *videoUrl = [data objectForKey:@"video"];
+                NSString *gifUrl = [data objectForKey:@"gif"];
 //                self.mediaPlayer.contentURL = [NSURL URLWithString:videoUrl];
 //                [self.mediaPlayer play];
                 
