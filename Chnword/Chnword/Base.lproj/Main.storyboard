@@ -338,6 +338,9 @@
                                     <constraint firstAttribute="bottom" secondItem="iWD-fz-s9X" secondAttribute="bottom" constant="22" id="gvd-ol-CrI"/>
                                     <constraint firstItem="Vr9-QI-cu5" firstAttribute="top" secondItem="cv1-9P-vII" secondAttribute="top" constant="22" id="oju-y0-kso"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="backClicked:" destination="uqF-aK-Fyr" eventType="touchDown" id="J7I-iV-9xd"/>
+                                </connections>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="53" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XAl-QB-zej">
                                 <rect key="frame" x="0.0" y="179" width="600" height="372"/>
@@ -392,6 +395,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="主页" id="34o-qY-AMo"/>
                     <connections>
+                        <outlet property="searchField" destination="Vr9-QI-cu5" id="eVq-jI-OR3"/>
+                        <outlet property="tableView" destination="XAl-QB-zej" id="xYj-28-8Dh"/>
                         <segue destination="Ubk-sU-gA9" kind="push" identifier="" id="AKl-r6-FxD"/>
                     </connections>
                 </viewController>

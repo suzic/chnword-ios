@@ -100,4 +100,14 @@
     self.tabBarController.tabBar.hidden = YES;
 }
 
+/**
+ *  用来取消选中
+ */
+- (IBAction) backClicked:(id)sender
+{
+    if ([self.searchField canResignFirstResponder]) {
+        [self.searchField resignFirstResponder];
+    }
+    
+}
 @end

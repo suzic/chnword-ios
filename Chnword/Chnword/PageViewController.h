@@ -13,6 +13,8 @@
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
 
+@property (nonatomic, retain) IBOutlet UITextField *searchField;
+
 /**
  *  汉字动画点击
  */
@@ -22,5 +24,12 @@
  *  汉字扫描点击
  */
 - (IBAction) onPageScan:(id)sender;
+
+
+/**
+ *  用来取消选中
+ */
+- (IBAction) backClicked:(id)sender;
+
 
 @end
