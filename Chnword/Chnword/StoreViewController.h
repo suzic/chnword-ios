@@ -10,6 +10,9 @@
 
 @interface StoreViewController : UIViewController
 
+//激活码
+@property (nonatomic, retain) IBOutlet UITextField *activeCodeField;
+
 /**
  *  购买点击
  */
@@ -19,4 +22,9 @@
  *
  */
 - (IBAction) submitCode:(id)sender;
+
+/**
+ *  隐藏键盘
+ */
+- (IBAction) hideKeyBoard:(id)sender;
 @end

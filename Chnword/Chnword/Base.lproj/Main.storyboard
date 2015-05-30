@@ -694,7 +694,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="usZ-8B-3O0">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="usZ-8B-3O0" customClass="UIControl">
                                 <rect key="frame" x="0.0" y="471" width="600" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我有激活码" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNG-81-rel">
@@ -749,6 +749,9 @@
                                         <exclude reference="83Y-9Z-oMr"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="hideKeyBoard:" destination="rux-Bf-4N2" eventType="touchDown" id="xtV-Jt-NhY"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Yu-ry-VcW">
                                 <rect key="frame" x="0.0" y="409" width="600" height="60"/>
@@ -872,6 +875,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="商店" id="OmX-Pl-HP1"/>
+                    <connections>
+                        <outlet property="activeCodeField" destination="xc2-qn-mBM" id="Syh-aU-0YL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aYO-To-bZu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
