@@ -12,4 +12,7 @@
 
 @property (nonatomic, retain) NSString *wordCode;
 
+@property (nonatomic, retain) IBOutlet UIView *gifView;
+@property (nonatomic, retain) IBOutlet UIView *videoView;
+
 @end
