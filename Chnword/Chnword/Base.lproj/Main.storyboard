@@ -766,6 +766,10 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="gifView" destination="Bo6-4X-A8h" id="ow7-nY-nPi"/>
+                        <outlet property="videoView" destination="KNJ-E6-pJr" id="iPw-hm-aff"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Q5-et-aS0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

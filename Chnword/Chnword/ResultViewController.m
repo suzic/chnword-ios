@@ -210,6 +210,12 @@
 {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
     
+    
+    DisplayMovieViewController *disControler = [self.storyboard instantiateViewControllerWithIdentifier:@"DisplayMovieViewController"];
+    [self.navigationController pushViewController:disControler animated:YES];
+    return;
+    
+    
 //    self.currentWordCode = [self.wordIndexs objectAtIndex:indexPath.row];
 //    [self performSegueWithIdentifier:@"DisplayMovie" sender:nil];
     

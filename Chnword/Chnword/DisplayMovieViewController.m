@@ -30,8 +30,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self initViews];
     [self initGifImagesWith:nil];
+    [self initViews];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,24 +63,25 @@
     size_t count = CGImageSourceGetCount(source);
     
     NSMutableArray *tempArray = [NSMutableArray array];
-    
+    NSLog(@"the source images count is %ld", count);
     for (size_t i = 0; i < count; i ++) {
+        NSLog(@"the source image at index %ld", count);
         CGImageRef imageRef = CGImageSourceCreateImageAtIndex(source, i, NULL);
         [tempArray addObject:[UIImage imageWithCGImage:imageRef]];
         CGImageRelease(imageRef);
     }
     CFRelease(source);
-    
-    self.gifCoverFlowView.images = tempArray;
-    
+    NSLog(@"the final images count %d", tempArray.count);
+//    self.gifCoverFlowView.images = tempArray;
+    self.gifImages = tempArray;
     
 }
 
 
 - (void) initViews {
-    self.gifCoverFlowView = [[CoverFlowView alloc] initWithFrame:self.gifView.bounds];
-    NSArray *images = [[NSArray alloc] init];
-    self.gifCoverFlowView.images = images;
+    self.gifCoverFlowView = [CoverFlowView coverFlowViewWithFrame:self.gifView.bounds andImages:self.gifImages sideImageCount:6 sideImageScale:0.35 middleImageScale:0.6];
+//    NSArray *images = [[NSArray alloc] init];
+//    self.gifCoverFlowView.images = images;
     [self.gifView addSubview:self.gifCoverFlowView];
     
     
@@ -89,6 +91,9 @@
     
     self.movieController.contentURL = videoUrl;
     [self.videoView addSubview:self.movieController.view];
+    
+    [self showGif];
+//    [self showVideo];
     
 }
 
