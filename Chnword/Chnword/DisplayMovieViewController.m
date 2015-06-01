@@ -14,6 +14,8 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import <ImageIO/ImageIO.h>
 
+#import "ScanViewController.h"
+
 @interface DisplayMovieViewController ()
 
 @property (nonatomic, retain) CoverFlowView *gifCoverFlowView;
@@ -21,6 +23,7 @@
 
 @property (nonatomic, retain) NSArray *gifImages;
 
+@property (nonatomic, assign) BOOL isInitView;
 
 @end
 
@@ -30,9 +33,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.isInitView = false;
     [self initGifImagesWith:nil];
-    [self initViews];
     
+}
+
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+//    [self initViews];
+    
+}
+
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self initViews];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,8 +72,6 @@
     
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
     imageView.backgroundColor = [UIColor clearColor];
-//    imageView.image = [UIImage sd_animatedGifWithData:imageData];
-//    imageView.image = [UIImage sd_animatedGifNamed:name];
     
     //SCGIFimage
     CGImageSourceRef source = CGImageSourceCreateWithData((CFDataRef) imageData, NULL);
@@ -72,28 +87,43 @@
     }
     CFRelease(source);
     NSLog(@"the final images count %d", tempArray.count);
-//    self.gifCoverFlowView.images = tempArray;
     self.gifImages = tempArray;
     
 }
 
 
 - (void) initViews {
-    self.gifCoverFlowView = [CoverFlowView coverFlowViewWithFrame:self.gifView.bounds andImages:self.gifImages sideImageCount:6 sideImageScale:0.35 middleImageScale:0.6];
-//    NSArray *images = [[NSArray alloc] init];
-//    self.gifCoverFlowView.images = images;
+    
+    
+    if (self.isInitView) {
+        return ;
+    }
+    
+    CGRect coverViewRect = self.gifView.bounds;
+    coverViewRect.size.height -= 20;
+    
+    
+    self.gifCoverFlowView = [CoverFlowView coverFlowViewWithFrame:self.gifView.bounds andImages:self.gifImages sideImageCount:2 sideImageScale:0.35 middleImageScale:0.6];
     [self.gifView addSubview:self.gifCoverFlowView];
+    NSLog(@"%@", NSStringFromCGRect(self.gifView.frame));
     
     
+    NSString *xftPath = [[NSBundle mainBundle] pathForResource:@"cft" ofType:@"mp4"];
     NSURL *videoUrl = [NSURL URLWithString:@""];
+    videoUrl = [NSURL fileURLWithPath:xftPath];
 //    self.movieController = [[MPMoviePlayerController alloc] initWithContentURL:videoUrl];
     self.movieController = [[MPMoviePlayerController alloc] init];
     
     self.movieController.contentURL = videoUrl;
+    self.movieController.view.frame = self.videoView.bounds;
     [self.videoView addSubview:self.movieController.view];
+    [self.movieController play];
     
-    [self showGif];
-//    [self showVideo];
+//    [self showGif];
+    [self showVideo];
+    
+    
+    self.isInitView = true;
     
 }
 
@@ -106,4 +136,39 @@
     self.videoView.hidden = YES;
     self.gifView.hidden = NO;
 }
+
+
+#pragma mark - UIAction Event Handler
+
+- (IBAction) goBack:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction) quickLook:(id)sender
+{
+    [self showGif];
+}
+
+- (IBAction) scan:(id)sender
+{
+//    ScanViewController *scanViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ScanViewController"];
+//    [self presentViewController:scanViewController animated:YES completion:^{
+//        
+//    }];
+    
+//    UIImagePickerController *imgPicker = [UIImagePickerController new];
+//    imgPicker.delegate = self;
+//    
+//    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+//    {
+//        imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+//        [self presentViewController:imgPicker animated:YES completion:nil];
+//    }
+}
+
+#pragma -mark UIImagePickerController Delegate
+
+
+
 @end

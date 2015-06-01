@@ -15,4 +15,12 @@
 @property (nonatomic, retain) IBOutlet UIView *gifView;
 @property (nonatomic, retain) IBOutlet UIView *videoView;
 
+
+- (IBAction) goBack:(id)sender;
+
+- (IBAction) quickLook:(id)sender;
+
+- (IBAction) scan:(id)sender;
+
+
 @end

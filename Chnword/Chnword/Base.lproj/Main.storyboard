@@ -706,6 +706,9 @@
                                         <state key="normal" title="分类">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="goBack:" destination="Sn7-HC-blO" eventType="touchUpInside" id="s4B-MY-15k"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCb-55-Hay">
                                         <rect key="frame" x="285" y="8" width="30" height="30"/>
@@ -716,6 +719,9 @@
                                         <state key="normal" title="快览">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="quickLook:" destination="Sn7-HC-blO" eventType="touchDragInside" id="dm5-se-nKn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Smv-Zb-Dz5">
                                         <rect key="frame" x="540" y="8" width="30" height="30"/>
@@ -726,6 +732,9 @@
                                         <state key="normal" title="扫描">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="scan:" destination="Sn7-HC-blO" eventType="touchUpInside" id="pdo-nT-uWc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
