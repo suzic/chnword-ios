@@ -48,7 +48,7 @@
 }
 
 
-/*
+
 
 #pragma mark
 #pragma mark - UIInterfaceOrigation
@@ -155,7 +155,7 @@
     [G8Tesseract clearCache];
 }
 
-*/
+
 
 
 @end

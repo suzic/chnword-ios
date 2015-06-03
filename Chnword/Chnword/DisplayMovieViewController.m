@@ -14,9 +14,11 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import <ImageIO/ImageIO.h>
 
-#import "ScanViewController.h"
+#import <TesseractOCR.h>
 
-@interface DisplayMovieViewController () <UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+//#import "ScanViewController.h"
+
+@interface DisplayMovieViewController () <G8TesseractDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 @property (nonatomic, retain) CoverFlowView *gifCoverFlowView;
 @property (nonatomic, retain) MPMoviePlayerController *movieController;
@@ -24,6 +26,10 @@
 @property (nonatomic, retain) NSArray *gifImages;
 
 @property (nonatomic, assign) BOOL isInitView;
+
+
+//TESSOCR
+@property (nonatomic, strong) NSOperationQueue *operationQueue;
 
 @end
 
@@ -158,14 +164,14 @@
 //        
 //    }];
     
-//    UIImagePickerController *imgPicker = [UIImagePickerController new];
-//    imgPicker.delegate = self;
-//    
-//    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
-//    {
-//        imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-//        [self presentViewController:imgPicker animated:YES completion:nil];
-//    }
+    UIImagePickerController *imgPicker = [UIImagePickerController new];
+    imgPicker.delegate = self;
+    
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+        imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        [self presentViewController:imgPicker animated:YES completion:nil];
+    }
 }
 
 #pragma -mark UIImagePickerController Delegate
@@ -185,12 +191,8 @@
     }
     
     [picker dismissViewControllerAnimated:YES completion:nil];
+    //处理图像并生成字符串
     
-//    self.navigationController.navigationBar.barStyle = self.navBarStyle;
-    
-    [self dismissViewControllerAnimated:YES completion:^{
-        
-    }];
     
 }
 
@@ -199,5 +201,114 @@
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark - UIAction
+-(void)recognizeImageWithTesseract:(UIImage *)image
+{
+    // Preprocess the image so Tesseract's recognition will be more accurate
+    UIImage *bwImage = [image g8_blackAndWhite];
+    
+    // Animate a progress activity indicator
+//    [self.activityIndicator startAnimating];
+    
+    // Display the preprocessed image to be recognized in the view
+//    self.imageToRecognize.image = bwImage;
+    
+    // Create a new `G8RecognitionOperation` to perform the OCR asynchronously
+    // It is assumed that there is a .traineddata file for the language pack
+    // you want Tesseract to use in the "tessdata" folder in the root of the
+    // project AND that the "tessdata" folder is a referenced folder and NOT
+    // a symbolic group in your project
+    //    G8RecognitionOperation *operation = [[G8RecognitionOperation alloc] initWithLanguage:@"chi_sim"];
+    G8RecognitionOperation *operation = [[G8RecognitionOperation alloc] initWithLanguage:@"en"];
+    
+    // Use the original Tesseract engine mode in performing the recognition
+    // (see G8Constants.h) for other engine mode options
+    operation.tesseract.engineMode = G8OCREngineModeTesseractOnly;
+    
+    // Let Tesseract automatically segment the page into blocks of text
+    // based on its analysis (see G8Constants.h) for other page segmentation
+    // mode options
+    operation.tesseract.pageSegmentationMode = G8PageSegmentationModeAutoOnly;
+    
+    // Optionally limit the time Tesseract should spend performing the
+    // recognition
+    //operation.tesseract.maximumRecognitionTime = 1.0;
+    
+    // Set the delegate for the recognition to be this class
+    // (see `progressImageRecognitionForTesseract` and
+    // `shouldCancelImageRecognitionForTesseract` methods below)
+    operation.delegate = self;
+    
+    // Optionally limit Tesseract's recognition to the following whitelist
+    // and blacklist of characters
+    //operation.tesseract.charWhitelist = @"01234";
+    //operation.tesseract.charBlacklist = @"56789";
+    
+    // Set the image on which Tesseract should perform recognition
+    operation.tesseract.image = bwImage;
+    
+    // Optionally limit the region in the image on which Tesseract should
+    // perform recognition to a rectangle
+    //operation.tesseract.rect = CGRectMake(20, 20, 100, 100);
+    
+    // Specify the function block that should be executed when Tesseract
+    // finishes performing recognition on the image
+    operation.recognitionCompleteBlock = ^(G8Tesseract *tesseract) {
+        // Fetch the recognized text
+        NSString *recognizedText = tesseract.recognizedText;
+        
+        NSLog(@"%@", recognizedText);
+        
+        // Spawn an alert with the recognized text
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"OCR Result"
+                                                        message:recognizedText
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    };
+    
+    // Finally, add the recognition operation to the queue
+    [self.operationQueue addOperation:operation];
+}
+
+#pragma mark -G8TesseractDelegate
+/**
+ *  An optional method to be called periodically during recognition so
+ *  the recognition's progress can be observed.
+ *
+ *  @param tesseract The `G8Tesseract` object performing the recognition.
+ */
+- (void)progressImageRecognitionForTesseract:(G8Tesseract *)tesseract
+{
+    NSLog(@"progress: %lu", (unsigned long)tesseract.progress);
+}
+
+/**
+ *  An optional method to be called periodically during recognition so
+ *  the user can choose whether or not to cancel recognition.
+ *
+ *  @param tesseract The `G8Tesseract` object performing the recognition.
+ *
+ *  @return Whether or not to cancel the recognition in progress.
+ */
+- (BOOL)shouldCancelImageRecognitionForTesseract:(G8Tesseract *)tesseract
+{
+    return NO;
+}
+
+/**
+ *  An optional method to provide image preprocessing. To perform default
+ *  Tesseract preprocessing return `nil` in this method.
+ *
+ *  @param tesseract   The `G8Tesseract` object performing the recognition.
+ *  @param sourceImage The source `UIImage` to perform preprocessing.
+ *
+ *  @return Preprocessed `UIImage` or nil to perform default preprocessing.
+ */
+- (UIImage *)preprocessedImageForTesseract:(G8Tesseract *)tesseract sourceImage:(UIImage *)sourceImage
+{
+    return nil;
+}
 
 @end

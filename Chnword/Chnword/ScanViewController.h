@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
-#import <TesseractOCR/TesseractOCR.h>
+#import <TesseractOCR.h>
 
 
 @interface ScanViewController : UIViewController <G8TesseractDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
@@ -23,8 +23,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageToRecognize;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
-- (IBAction)openCamera:(id)sender;
-- (IBAction)recognizeSampleImage:(id)sender;
+//- (IBAction)openCamera:(id)sender;
+//- (IBAction)recognizeSampleImage:(id)sender;
 
 
 @end
