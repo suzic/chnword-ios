@@ -16,7 +16,7 @@
 
 #import "ScanViewController.h"
 
-@interface DisplayMovieViewController ()
+@interface DisplayMovieViewController () <UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 @property (nonatomic, retain) CoverFlowView *gifCoverFlowView;
 @property (nonatomic, retain) MPMoviePlayerController *movieController;
@@ -147,6 +147,7 @@
 
 - (IBAction) quickLook:(id)sender
 {
+    [self.movieController pause];
     [self showGif];
 }
 
@@ -168,7 +169,35 @@
 }
 
 #pragma -mark UIImagePickerController Delegate
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    NSString* type = [info objectForKey:UIImagePickerControllerMediaType];
+    
+    UIImage *image = nil;
+    
+    if ([type isEqualToString:@"public.image"])
+    {
+        image = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
+        
+    }else if ([type isEqualToString:@"public.movie"]){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"Sorry, 人家不支持视频啦，讨厌！" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        [alert show];
+    }
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
+//    self.navigationController.navigationBar.barStyle = self.navBarStyle;
+    
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+    
+}
 
+- (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
 
 
 @end
