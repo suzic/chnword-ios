@@ -10,6 +10,8 @@
 #import "NetParamFactory.h"
 #import "NetManager.h"
 #import "Util.h"
+#import "DataUtil.h"
+
 
 @interface RegisterViewController ()
 
@@ -23,10 +25,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleKeyBoardStart:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleKeyboardEnd:) name:UIKeyboardDidHideNotification object:nil];
     
+
     
 }
 
@@ -73,54 +78,46 @@
     
     NSString *opid = [Util generateUuid];
     NSString *deviceId = [Util getUdid];
-    NSString *userid = @"userid";
+    NSString *userid = [Util generateUuid];
     
-    //网络测试入口
-//    NSString *url = @"http://app.3000zi.com/api/verify.php";
-//    NSDictionary *param = [NetParamFactory verifyParam:opid userid:userid device:deviceId code:@"code" user:@"user"];
-//    [NetManager postRequest:url param:param success:^(id json){
-//        
-//        NSLog(@"success with json: %@", json);
-//        
-//    }fail:^ (){
-//        NSLog(@"fail ");
-//    }];
+    //本地用户存储
+    NSDictionary *param = [NetParamFactory
+                           registParam:opid
+                           userid:userid
+                           device:deviceId
+                           userCode:userid
+                           deviceId:deviceId
+                           session:[Util generateUuid]
+                           verify:@"verify"];
+    [NetManager postRequest:URL_REGIST param:param success:^(id json){
+        
+        NSLog(@"success with json: %@", json);
+        
+        NSDictionary *dict = json;
+        
+        if (dict) {
+            NSString *result = [dict objectForKey:@"result"];
+            if (result && [@"1" isEqualToString:result]) {
+                //注册成功
+                [DataUtil setDefaultUser:userid];
+                [self performSegueWithIdentifier:@"PushToMain" sender:nil];
+            } else {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"注册失败" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+                [alert show];
+            }
+            
+        }else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"网络连接失败" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+            [alert show];
+        }
+        
+        
+    }fail:^ (){
+        NSLog(@"fail ");
+        
+    }];
 
     
-    
-//    NSString *url = @"http://app.3000zi.com/api/sublist.php";
-//    NSDictionary *param = [NetParamFactory subListParam:opid userid:userid device:deviceId lists:@[@"zone_0001"]];
-//    [NetManager postRequest:url param:param success:^(id json){
-//        
-//        NSLog(@"success with json: %@", json);
-//        
-//    }fail:^ (){
-//        NSLog(@"fail ");
-//    }];
-
-    
-//    NSString *url = @"http://app.3000zi.com/api/show.php";
-//    NSDictionary *param = [NetParamFactory showParam:opid userid:@"1" device:@"1" wordCode:@"1"];
-//    
-//    [NetManager postRequest:url param:param success:^(id json){
-//        
-//        NSLog(@"success with json: %@", json);
-//        
-//    }fail:^ (){
-//        NSLog(@"fail ");
-//    }];
-
-//    NSString *url = @"http://app.3000zi.com/api/regist.php";
-//    NSDictionary *param = [NetParamFactory registParam:opid userid:userid device:deviceId userCode:@"usercode" deviceId:deviceId session:@"sessionId" verify:@"verify"];
-//    [NetManager postRequest:url param:param success:^(id json){
-//        
-//        NSLog(@"success with json: %@", json);
-//        
-//    }fail:^ (){
-//        NSLog(@"fail ");
-//    }];
-
-    [self performSegueWithIdentifier:@"PushToMain" sender:nil];
     
     
 }
@@ -135,7 +132,7 @@
     
     NSString *deviceId = [Util getUdid];
     
-    NSDictionary *param = [NetParamFactory registParam:opid userid:userid device:deviceId userCode:userid deviceId:deviceId session:@"sessionId" verify:@"verify"];
+    NSDictionary *param = [NetParamFactory registParam:opid userid:userid device:deviceId userCode:userid deviceId:deviceId session:[Util generateUuid] verify:@"verify"];
     [NetManager postRequest:URL_REGIST param:param success:^(id json){
         
         NSLog(@"success with json: %@", json);

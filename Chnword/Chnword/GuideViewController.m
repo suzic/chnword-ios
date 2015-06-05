@@ -7,6 +7,8 @@
 //
 
 #import "GuideViewController.h"
+#import "DataUtil.h"
+
 
 @interface GuideViewController () <UIScrollViewDelegate>
 
@@ -95,6 +97,13 @@
 
 - (void) buttonClicked:(id) sender
 {
+    if ([DataUtil getDefaultUser]) {
+        UIViewController *mainViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+        [self.navigationController pushViewController:mainViewController animated:YES];
+        return ;
+    }
+
+    
     [self performSegueWithIdentifier:@"RegisterViewController" sender:nil];
 }
 
