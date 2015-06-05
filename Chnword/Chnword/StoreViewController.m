@@ -129,8 +129,9 @@
 //    [DataUtil setDefaultUser:deviceId];
     [self.hud show:YES];
     
-    NSDictionary *param = [NetParamFactory registParam:opid userid:userid device:deviceId userCode:userid  deviceId:deviceId session:[Util generateUuid] verify:@"verify"];
-    [NetManager postRequest:URL_REGIST param:param success:^(id json){
+//    NSDictionary *param = [NetParamFactory registParam:opid userid:userid device:deviceId userCode:userid  deviceId:deviceId session:[Util generateUuid] verify:@"verify"];
+    NSDictionary *param = [NetParamFactory verifyParam:opid userid:userid device:deviceId code:activeCode user:userid];
+    [NetManager postRequest:URL_VERIFY param:param success:^(id json){
         
         NSLog(@"success with json: %@", json);
         
@@ -163,7 +164,8 @@
                 [alert show];
                 
             }else {
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"解锁失败" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+                NSString *message = [dict objectForKey:@"message"];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:message delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
                 [alert show];
             }
             
