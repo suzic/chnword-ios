@@ -10,6 +10,18 @@
 
 @interface DataUtil : NSObject
 
+
+
+//默认用户或者其他
+
++ (void) setDefaultUser:(NSString *) userCode;
+
++ (NSString *) getDefaultUser;
+
+//首次登陆
++ (BOOL) isFirstLogin;
+
+
 /**
  *  添加一个用户
  */

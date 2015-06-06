@@ -16,8 +16,42 @@
 #define Submit_Code_None @"Submit_Code_None"
 #define Submit_Code_Till @"Sbumit_Code_Till"
 
+#define CHNWORD_DEFAULT_USER @"CHNWORD_DEFAULT_USER"
+#define CHNWORD_ISFIRST_LOGIN @"CHNWORD_ISFIRST_LOGIN"
 
 @implementation DataUtil
+
+
++ (void) setDefaultUser:(NSString *) userCode
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    [defaults setObject:userCode forKey:CHNWORD_DEFAULT_USER];
+    [defaults synchronize];
+}
+
++ (NSString *) getDefaultUser
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    return [defaults objectForKey:CHNWORD_DEFAULT_USER];
+}
+
+//首次登陆
++ (BOOL) isFirstLogin
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *str = [defaults objectForKey:CHNWORD_ISFIRST_LOGIN];
+    if (str && [str isEqualToString:CHNWORD_ISFIRST_LOGIN]) {
+        return false;
+    } else {
+        [defaults setObject:CHNWORD_ISFIRST_LOGIN forKey:CHNWORD_ISFIRST_LOGIN];
+        [defaults synchronize];
+    }
+    
+    return true;
+}
 
 /**
  *  添加一个用户

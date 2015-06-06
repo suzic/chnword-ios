@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		017970BBFA422B182FA11A1F /* libPods-Chnword.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 615CF8E98A4ECA8143E933F1 /* libPods-Chnword.a */; };
+		08788BD501399F58C0248553 /* libPods-Chnword.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 615CF8E98A4ECA8143E933F1 /* libPods-Chnword.a */; };
 		A70462381AF7AB39005F2FE8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70462371AF7AB39005F2FE8 /* AVFoundation.framework */; };
 		A704627A1AF7C3FB005F2FE8 /* AnimCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A70462791AF7C3FB005F2FE8 /* AnimCollectionViewCell.m */; };
 		A7158E661B02D555006EB801 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7158E651B02D555006EB801 /* NetManager.m */; };
@@ -20,7 +20,6 @@
 		A717E5F01B1F66C800038019 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = A717E5EF1B1F66C800038019 /* tessdata */; };
 		A72D73561B084DDC0013E735 /* DataUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A72D73551B084DDC0013E735 /* DataUtil.m */; };
 		A72D73691B085D570013E735 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A72D73591B085D570013E735 /* MBProgressHUD.m */; };
-		A72D736A1B085D570013E735 /* libSDWebImage_universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A72D73681B085D570013E735 /* libSDWebImage_universal.a */; };
 		A72D736D1B0865480013E735 /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A72D736C1B0865480013E735 /* NSObject+JSON.m */; };
 		A74725DE1B1958220065E512 /* CoverFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = A74725DD1B1958220065E512 /* CoverFlowView.m */; };
 		A75202411B1607000054DB91 /* CHKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = A75202401B1607000054DB91 /* CHKeychain.m */; };
@@ -89,11 +88,13 @@
 		A7AB1B311B0B7A8400739B8C /* image_sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A7AB1B301B0B7A8400739B8C /* image_sample.jpg */; };
 		A7E14C641AF6646D00018386 /* ModelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E14C631AF6646D00018386 /* ModelTableViewCell.m */; };
 		A7E14C671AF664D300018386 /* FontCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E14C661AF664D300018386 /* FontCollectionViewCell.m */; };
+		A7F6DA5F1B22DF8D005ABCC9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F6DA5E1B22DF8D005ABCC9 /* AudioToolbox.framework */; };
+		A7F6DA611B22DFC8005ABCC9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F6DA601B22DFC8005ABCC9 /* CoreGraphics.framework */; };
+		A7F9F45A1B2288C3005FEF2D /* libSDWebImage_universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F9F4591B2288C3005FEF2D /* libSDWebImage_universal.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		615CF8E98A4ECA8143E933F1 /* libPods-Chnword.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Chnword.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		91E67091585392E3631D7238 /* Pods-Chnword.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chnword.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chnword/Pods-Chnword.debug.xcconfig"; sourceTree = "<group>"; };
 		A70462371AF7AB39005F2FE8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A704623E1AF7AC09005F2FE8 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		A70462461AF7AC5A005F2FE8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -124,7 +125,6 @@
 		A72D73651B085D570013E735 /* UIButton+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WebCache.h"; sourceTree = "<group>"; };
 		A72D73661B085D570013E735 /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
 		A72D73671B085D570013E735 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
-		A72D73681B085D570013E735 /* libSDWebImage_universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSDWebImage_universal.a; sourceTree = "<group>"; };
 		A72D736B1B0865480013E735 /* NSObject+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSON.h"; sourceTree = "<group>"; };
 		A72D736C1B0865480013E735 /* NSObject+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSON.m"; sourceTree = "<group>"; };
 		A74725DC1B1958220065E512 /* CoverFlowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoverFlowView.h; sourceTree = "<group>"; };
@@ -235,7 +235,11 @@
 		A7E14C631AF6646D00018386 /* ModelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelTableViewCell.m; sourceTree = "<group>"; };
 		A7E14C651AF664D300018386 /* FontCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontCollectionViewCell.h; sourceTree = "<group>"; };
 		A7E14C661AF664D300018386 /* FontCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontCollectionViewCell.m; sourceTree = "<group>"; };
-		B837C8FC916D6C08B5EA3271 /* Pods-Chnword.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chnword.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chnword/Pods-Chnword.release.xcconfig"; sourceTree = "<group>"; };
+		A7F6DA5E1B22DF8D005ABCC9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A7F6DA601B22DFC8005ABCC9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A7F9F4591B2288C3005FEF2D /* libSDWebImage_universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSDWebImage_universal.a; sourceTree = "<group>"; };
+		BC1549320F3C77569C648F62 /* Pods-Chnword.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chnword.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chnword/Pods-Chnword.release.xcconfig"; sourceTree = "<group>"; };
+		DE934889694B2B5E0AC95A6A /* Pods-Chnword.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chnword.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chnword/Pods-Chnword.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,13 +247,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7F6DA611B22DFC8005ABCC9 /* CoreGraphics.framework in Frameworks */,
+				A7F6DA5F1B22DF8D005ABCC9 /* AudioToolbox.framework in Frameworks */,
 				A717E5EC1B1F65D500038019 /* QuartzCore.framework in Frameworks */,
 				A717E5EA1B1F640600038019 /* MobileCoreServices.framework in Frameworks */,
+				A7F9F45A1B2288C3005FEF2D /* libSDWebImage_universal.a in Frameworks */,
 				A717E5E91B1F63F800038019 /* SystemConfiguration.framework in Frameworks */,
 				A717E5E81B1F5CCD00038019 /* ImageIO.framework in Frameworks */,
-				A72D736A1B085D570013E735 /* libSDWebImage_universal.a in Frameworks */,
 				A70462381AF7AB39005F2FE8 /* AVFoundation.framework in Frameworks */,
-				017970BBFA422B182FA11A1F /* libPods-Chnword.a in Frameworks */,
+				08788BD501399F58C0248553 /* libPods-Chnword.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +265,8 @@
 		953B960A1FA8492D68C63CF1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				91E67091585392E3631D7238 /* Pods-Chnword.debug.xcconfig */,
-				B837C8FC916D6C08B5EA3271 /* Pods-Chnword.release.xcconfig */,
+				DE934889694B2B5E0AC95A6A /* Pods-Chnword.debug.xcconfig */,
+				BC1549320F3C77569C648F62 /* Pods-Chnword.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -268,6 +274,8 @@
 		A70462391AF7ABD1005F2FE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A7F6DA601B22DFC8005ABCC9 /* CoreGraphics.framework */,
+				A7F6DA5E1B22DF8D005ABCC9 /* AudioToolbox.framework */,
 				A717E5EB1B1F65D500038019 /* QuartzCore.framework */,
 				A704624E1AF7ACDC005F2FE8 /* MobileCoreServices.framework */,
 				A704624A1AF7AC89005F2FE8 /* SystemConfiguration.framework */,
@@ -302,8 +310,8 @@
 		A72D735A1B085D570013E735 /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
+				A7F9F4591B2288C3005FEF2D /* libSDWebImage_universal.a */,
 				A72D735B1B085D570013E735 /* include */,
-				A72D73681B085D570013E735 /* libSDWebImage_universal.a */,
 			);
 			path = SDWebImage;
 			sourceTree = "<group>";
@@ -848,18 +856,18 @@
 		};
 		A78F9F731AED36C700F6CE9C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91E67091585392E3631D7238 /* Pods-Chnword.debug.xcconfig */;
+			baseConfigurationReference = DE934889694B2B5E0AC95A6A /* Pods-Chnword.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					"$(ARCHS_STANDARD)",
-					armv7s,
-					armv7,
-					arm64,
-					x86_64,
 					I386,
+					arm64,
+					armv7,
+					armv7s,
+					x86_64,
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -872,10 +880,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Chnword/libs/SDWebImage",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				LINK_WITH_STANDARD_LIBRARIES = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_LIBTOOLFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -885,18 +892,18 @@
 		};
 		A78F9F741AED36C700F6CE9C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B837C8FC916D6C08B5EA3271 /* Pods-Chnword.release.xcconfig */;
+			baseConfigurationReference = BC1549320F3C77569C648F62 /* Pods-Chnword.release.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					"$(ARCHS_STANDARD)",
-					armv7s,
-					armv7,
-					arm64,
-					x86_64,
 					I386,
+					arm64,
+					armv7,
+					armv7s,
+					x86_64,
 				);
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -909,7 +916,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Chnword/libs/SDWebImage",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				ONLY_ACTIVE_ARCH = NO;
