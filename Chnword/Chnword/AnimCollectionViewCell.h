@@ -11,5 +11,6 @@
 @interface AnimCollectionViewCell : UICollectionViewCell
 
 @property (nonatomic, retain) IBOutlet UILabel *modleNameLabel;
+@property (nonatomic, retain) IBOutlet UIImageView *modelFlag;
 
 @end

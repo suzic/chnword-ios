@@ -446,6 +446,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
+                                            <outlet property="modelFlag" destination="55H-NS-S18" id="deA-5A-slH"/>
                                             <outlet property="modleNameLabel" destination="olR-Cc-tNY" id="P46-ae-QI5"/>
                                         </connections>
                                     </collectionViewCell>
@@ -833,6 +834,9 @@
                                         <state key="normal" title="提交">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="submitCode:" destination="rux-Bf-4N2" eventType="touchUpInside" id="OXi-hV-ecx"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>

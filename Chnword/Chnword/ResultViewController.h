@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <TesseractOCR.h>
 
 @interface ResultViewController : UIViewController
 

@@ -22,6 +22,30 @@
 + (BOOL) isFirstLogin;
 
 
+
+/**
+ *  为用户设置解锁的条目
+ */
++ (void) setUnlockModel:(NSString *) userCode models:(NSArray *) models;
+
+/**
+ * 得到某用户解锁的条目
+ */
++ (NSArray *) getUnlockModel:(NSString *) userCode;
+
+/**
+ *  是否一个用户解锁了全部
+ */
++ (BOOL) isUnlockAllForUser:(NSString *) userCode;
+
+/**
+ *  设置一个用户解锁了全部
+ */
++ (void) setUnlockAllModelsForUser:(NSString *) userCode;
+
++ (BOOL) isContain:(NSArray *) arr object:(NSString *) str;
+
+
 /**
  *  添加一个用户
  */

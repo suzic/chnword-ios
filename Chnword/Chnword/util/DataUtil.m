@@ -19,6 +19,10 @@
 #define CHNWORD_DEFAULT_USER @"CHNWORD_DEFAULT_USER"
 #define CHNWORD_ISFIRST_LOGIN @"CHNWORD_ISFIRST_LOGIN"
 
+#define CHNWORD_UNLOCK_USER @"CHNWORD_UNLOCK_USER"
+#define CHNWORD_UNLOCK_ALL_USER @"CHNWORD_UNLOCK_ALL_USER"
+
+
 @implementation DataUtil
 
 
@@ -52,6 +56,108 @@
     
     return true;
 }
+
+
+/**
+ *  为用户设置解锁的条目
+ */
++ (void) setUnlockModel:(NSString *) userCode models:(NSArray *) models
+{
+    NSString *key = [NSString stringWithFormat:@"%@_%@", CHNWORD_UNLOCK_USER, userCode];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSArray *hasSet = [self getUnlockModel:userCode];
+    NSMutableArray *set = [NSMutableArray arrayWithArray:hasSet];
+    
+    
+    for (NSString *modelIndex in models) {
+        if ([self isContain:hasSet object:modelIndex]) {
+            [set addObject:modelIndex];
+        }
+    }
+    
+    [defaults setObject:set forKey:key];
+    
+    [defaults synchronize];
+}
+
++ (BOOL) isContain:(NSArray *) arr object:(NSString *) str
+{
+    BOOL isContain = false;
+    if (!str) {
+        return isContain;
+    }
+    
+    
+    for (NSString *string in arr) {
+        if (!string) {
+            continue;
+        }
+        if (![@"" isEqualToString:str] && ![@"" isEqualToString:str] && [str isEqualToString:string]) {
+            isContain = true;
+            break;
+        }
+    }
+    
+    
+    return isContain;
+}
+
+/**
+ * 得到某用户解锁的条目
+ */
++ (NSArray *) getUnlockModel:(NSString *) userCode
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *arr = [NSMutableArray array];
+    
+    NSString *key = [NSString stringWithFormat:@"%@_%@", CHNWORD_UNLOCK_USER, userCode];
+    
+    NSArray *unlocked = [defaults objectForKey:key];
+    if (unlocked) {
+        [arr addObjectsFromArray:unlocked];
+    }
+    
+    return arr;
+}
+
+
+/**
+ *  是否一个用户解锁了全部
+ */
++ (BOOL) isUnlockAllForUser:(NSString *) userCode
+{
+    BOOL result = false;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *key = [NSString stringWithFormat:@"%@_%@", CHNWORD_UNLOCK_ALL_USER, userCode];
+    NSString *value = [defaults objectForKey:key];
+    if (value && [@"unlock_all" isEqualToString:value]) {
+        result = true;
+    }
+    
+    return result;
+}
+
+/**
+ *  设置一个用户解锁了全部
+ */
++ (void) setUnlockAllModelsForUser:(NSString *) userCode
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *key = [NSString stringWithFormat:@"%@_%@", CHNWORD_UNLOCK_ALL_USER, userCode];
+    
+    [defaults setObject:@"unlock_all" forKey:key];
+    
+    [defaults synchronize];
+}
+
+
+
+
+
+
 
 /**
  *  添加一个用户

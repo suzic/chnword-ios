@@ -12,6 +12,7 @@
 #import "Util.h"
 
 #import "NSObject+JSON.h"
+#import "DataUtil.h"
 #import "MBProgressHUD.h"
 
 
@@ -23,6 +24,9 @@
 @property (nonatomic, retain) NSArray *names;
 @property (nonatomic, retain) NSArray *cnames;
 @property (nonatomic, assign) NSInteger raw;
+
+
+@property (nonatomic, retain) NSArray *unlocked_models;
 
 @end
 
@@ -106,6 +110,10 @@
     
     cell.modleNameLabel.text = [self.names objectAtIndex:indexPath.row];
     
+    if ([DataUtil isContain:self.unlocked_models object:[self.names objectAtIndex:indexPath.row]]) {
+        cell.modelFlag.hidden = YES;
+    }
+    
     return cell;
 }
 
@@ -115,8 +123,17 @@
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
 //    ResultViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ResultViewController"];
 //    [self.navigationController pushViewController:viewController animated:YES];
-    self.raw = indexPath.row;
-    [self performSegueWithIdentifier:@"AnimRes" sender:nil];
+    
+    
+    if ([DataUtil isContain:self.unlocked_models object:[self.names objectAtIndex:indexPath.row]]) {
+        self.raw = indexPath.row;
+        [self performSegueWithIdentifier:@"AnimRes" sender:nil];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"该模块未解说" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        [alert show];
+    }
+
+    
     
 }
 
@@ -147,6 +164,14 @@
         [self.navigationController.view addSubview:_hud];
     }
     return _hud;
+}
+
+- (NSArray *) unlocked_models
+{
+    if (!_unlocked_models) {
+        _unlocked_models = [DataUtil getUnlockModel:[DataUtil getDefaultUser]];
+    }
+    return _unlocked_models;
 }
 
 @end
