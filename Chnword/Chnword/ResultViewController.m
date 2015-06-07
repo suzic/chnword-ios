@@ -13,6 +13,7 @@
 #import "Util.h"
 #import "DisplayMovieViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
+#import "DataUtil.h"
 
 @interface ResultViewController () <UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -25,6 +26,8 @@
 @property (nonatomic, retain) NSString *currentWordCode;
 
 @property (nonatomic, retain) MPMoviePlayerController *mediaPlayer;
+
+@property (nonatomic, retain) NSArray *unlocked_models;
 
 @end
 
@@ -125,13 +128,18 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSString *str = [self.cnames objectAtIndex:indexPath.row];
+
+    
+    if (![DataUtil isUnlockAllForUser:[DataUtil getDefaultUser]]  && ![DataUtil isContain:self.unlocked_models object:str]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"未解说" delegate:self cancelButtonTitle:@"确定" otherButtonTitles: nil];
+    }
     
     
     NSString *opid = [Util generateUuid];
     NSString *userid = @"userid";
     NSString *deviceId = [Util getUdid];
     
-    NSString *str = [self.cnames objectAtIndex:indexPath.row];
     self.row = indexPath.row;
     NSDictionary *param = [NetParamFactory subListParam:opid userid:userid device:deviceId zone:str page:0 size:0];
     
@@ -332,4 +340,15 @@
     [theMovie.view removeFromSuperview];
     // 释放视频对象
 }
+
+
+#pragma mark - Getter
+- (NSArray *) unlocked_models
+{
+    if (!_unlocked_models) {
+        _unlocked_models = [DataUtil getUnlockModel:[DataUtil getDefaultUser]];
+    }
+    return _unlocked_models;
+}
+
 @end

@@ -125,7 +125,8 @@
 //    [self.navigationController pushViewController:viewController animated:YES];
     
     
-    if ([DataUtil isContain:self.unlocked_models object:[self.names objectAtIndex:indexPath.row]]) {
+    if ([DataUtil isUnlockAllForUser:[DataUtil getDefaultUser]] ||
+        [DataUtil isContain:self.unlocked_models object:[self.names objectAtIndex:indexPath.row]]) {
         self.raw = indexPath.row;
         [self performSegueWithIdentifier:@"AnimRes" sender:nil];
     } else {
