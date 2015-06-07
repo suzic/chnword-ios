@@ -152,13 +152,16 @@
                     //解锁全部的
                     NSLog(@"unlock——all");
                     [DataUtil setUnlockAllModelsForUser:[DataUtil getDefaultUser]];
+
                     
                 } else {
                     //得到解锁的其他条目,处理unlock_zone.
                     for (NSString *unlocked in zones) {
                         NSLog(@"unlocked %@", unlocked);
                     }
+
                     [DataUtil setUnlockModel:userid models:zones];
+
                     
                 }
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"解锁成功" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
