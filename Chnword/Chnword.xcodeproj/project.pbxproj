@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08788BD501399F58C0248553 /* libPods-Chnword.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 615CF8E98A4ECA8143E933F1 /* libPods-Chnword.a */; };
 		A70462381AF7AB39005F2FE8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70462371AF7AB39005F2FE8 /* AVFoundation.framework */; };
 		A704627A1AF7C3FB005F2FE8 /* AnimCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A70462791AF7C3FB005F2FE8 /* AnimCollectionViewCell.m */; };
 		A7158E661B02D555006EB801 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7158E651B02D555006EB801 /* NetManager.m */; };
@@ -94,7 +93,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		615CF8E98A4ECA8143E933F1 /* libPods-Chnword.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Chnword.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70462371AF7AB39005F2FE8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A704623E1AF7AC09005F2FE8 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		A70462461AF7AC5A005F2FE8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -238,8 +236,6 @@
 		A7F6DA5E1B22DF8D005ABCC9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A7F6DA601B22DFC8005ABCC9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A7F9F4591B2288C3005FEF2D /* libSDWebImage_universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSDWebImage_universal.a; sourceTree = "<group>"; };
-		BC1549320F3C77569C648F62 /* Pods-Chnword.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chnword.release.xcconfig"; path = "Pods/Target Support Files/Pods-Chnword/Pods-Chnword.release.xcconfig"; sourceTree = "<group>"; };
-		DE934889694B2B5E0AC95A6A /* Pods-Chnword.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chnword.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Chnword/Pods-Chnword.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,7 +251,6 @@
 				A717E5E91B1F63F800038019 /* SystemConfiguration.framework in Frameworks */,
 				A717E5E81B1F5CCD00038019 /* ImageIO.framework in Frameworks */,
 				A70462381AF7AB39005F2FE8 /* AVFoundation.framework in Frameworks */,
-				08788BD501399F58C0248553 /* libPods-Chnword.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,8 +260,6 @@
 		953B960A1FA8492D68C63CF1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DE934889694B2B5E0AC95A6A /* Pods-Chnword.debug.xcconfig */,
-				BC1549320F3C77569C648F62 /* Pods-Chnword.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -282,7 +275,6 @@
 				A70462461AF7AC5A005F2FE8 /* MessageUI.framework */,
 				A704623E1AF7AC09005F2FE8 /* ImageIO.framework */,
 				A70462371AF7AB39005F2FE8 /* AVFoundation.framework */,
-				615CF8E98A4ECA8143E933F1 /* libPods-Chnword.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -575,11 +567,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A78F9F721AED36C700F6CE9C /* Build configuration list for PBXNativeTarget "Chnword" */;
 			buildPhases = (
-				C967B5FC7F9FD664F55D9D9F /* Check Pods Manifest.lock */,
 				A78F9F4B1AED36C700F6CE9C /* Sources */,
 				A78F9F4C1AED36C700F6CE9C /* Frameworks */,
 				A78F9F4D1AED36C700F6CE9C /* Resources */,
-				CFCD6F3241A807A8CFEE38C8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -663,39 +653,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		C967B5FC7F9FD664F55D9D9F /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		CFCD6F3241A807A8CFEE38C8 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Chnword/Pods-Chnword-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A78F9F4B1AED36C700F6CE9C /* Sources */ = {
@@ -856,7 +813,6 @@
 		};
 		A78F9F731AED36C700F6CE9C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE934889694B2B5E0AC95A6A /* Pods-Chnword.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					"$(ARCHS_STANDARD)",
@@ -882,7 +838,7 @@
 					"$(PROJECT_DIR)/Chnword/libs/SDWebImage",
 				);
 				LINK_WITH_STANDARD_LIBRARIES = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_LIBTOOLFLAGS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -892,7 +848,6 @@
 		};
 		A78F9F741AED36C700F6CE9C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC1549320F3C77569C648F62 /* Pods-Chnword.release.xcconfig */;
 			buildSettings = {
 				ARCHS = (
 					"$(ARCHS_STANDARD)",
