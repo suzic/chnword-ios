@@ -23,6 +23,7 @@
 
 
 
+
 /**
  *  为用户设置解锁的条目
  */
@@ -44,6 +45,7 @@
 + (void) setUnlockAllModelsForUser:(NSString *) userCode;
 
 + (BOOL) isContain:(NSArray *) arr object:(NSString *) str;
+
 
 
 /**
