@@ -1,0 +1,1 @@
+/Users/khtc/Desktop/chnword/chnword-ios/Chnword/Build/Intermediates/ArchiveIntermediates/Chnword/InstallationBuildProductsLocation/Applications/Chnword.app
