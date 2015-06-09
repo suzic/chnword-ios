@@ -130,7 +130,7 @@
         self.raw = indexPath.row;
         [self performSegueWithIdentifier:@"AnimRes" sender:nil];
     } else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"该模块未解说" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"该模块未解锁" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
         [alert show];
     }
 

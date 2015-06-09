@@ -164,7 +164,8 @@
 
                     
                 }
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"解锁成功" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+                NSString *message = [NSString stringWithFormat:@"解锁成功：\n data \n %@", data];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:message delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
                 [alert show];
                 
             }else {

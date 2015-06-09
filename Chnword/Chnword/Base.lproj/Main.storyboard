@@ -210,7 +210,7 @@
         <!--Main View Controller-->
         <scene sceneID="Vb8-og-F46">
             <objects>
-                <tabBarController storyboardIdentifier="inViewController" hidesBottomBarWhenPushed="YES" id="Uks-Ql-kEf" customClass="MainViewController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainViewController" hidesBottomBarWhenPushed="YES" id="Uks-Ql-kEf" customClass="MainViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="bnM-q5-4Fy"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
