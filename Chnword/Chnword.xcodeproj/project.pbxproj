@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A70462381AF7AB39005F2FE8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A70462371AF7AB39005F2FE8 /* AVFoundation.framework */; };
 		A704627A1AF7C3FB005F2FE8 /* AnimCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A70462791AF7C3FB005F2FE8 /* AnimCollectionViewCell.m */; };
+		A7071BA81B2F9DC20081CE0C /* WordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7071BA71B2F9DC20081CE0C /* WordViewController.m */; };
 		A7158E661B02D555006EB801 /* NetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7158E651B02D555006EB801 /* NetManager.m */; };
 		A7158E691B02D56C006EB801 /* NetParamFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A7158E681B02D56C006EB801 /* NetParamFactory.m */; };
 		A7158E6C1B03A1DF006EB801 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = A7158E6B1B03A1DF006EB801 /* Util.m */; };
@@ -67,6 +68,8 @@
 		A78F9F961AEE6BB200F6CE9C /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F9F951AEE6BB200F6CE9C /* ResultViewController.m */; };
 		A78F9F991AEE730200F6CE9C /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F9F981AEE730200F6CE9C /* RegisterViewController.m */; };
 		A79252B21B1BE112006DFFC7 /* sample.gif in Resources */ = {isa = PBXBuildFile; fileRef = A79252B11B1BE112006DFFC7 /* sample.gif */; };
+		A7A614C31B30F40E008997BD /* Module.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A614C21B30F40E008997BD /* Module.m */; };
+		A7A614C71B30F46E008997BD /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A614C61B30F46E008997BD /* Word.m */; };
 		A7A98CB31B06ED2500A1176D /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A98C8F1B06ED2500A1176D /* AFHTTPRequestOperation.m */; };
 		A7A98CB41B06ED2500A1176D /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A98C911B06ED2500A1176D /* AFHTTPRequestOperationManager.m */; };
 		A7A98CB51B06ED2500A1176D /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A98C931B06ED2500A1176D /* AFHTTPSessionManager.m */; };
@@ -104,6 +107,8 @@
 		A704624E1AF7ACDC005F2FE8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		A70462781AF7C3FB005F2FE8 /* AnimCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimCollectionViewCell.h; sourceTree = "<group>"; };
 		A70462791AF7C3FB005F2FE8 /* AnimCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimCollectionViewCell.m; sourceTree = "<group>"; };
+		A7071BA61B2F9DC20081CE0C /* WordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordViewController.h; sourceTree = "<group>"; };
+		A7071BA71B2F9DC20081CE0C /* WordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordViewController.m; sourceTree = "<group>"; };
 		A7158E641B02D555006EB801 /* NetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetManager.h; sourceTree = "<group>"; };
 		A7158E651B02D555006EB801 /* NetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetManager.m; sourceTree = "<group>"; };
 		A7158E671B02D56C006EB801 /* NetParamFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetParamFactory.h; sourceTree = "<group>"; };
@@ -196,6 +201,10 @@
 		A78F9F981AEE730200F6CE9C /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		A78F9FA31AEE806100F6CE9C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		A79252B11B1BE112006DFFC7 /* sample.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sample.gif; sourceTree = "<group>"; };
+		A7A614C11B30F40E008997BD /* Module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Module.h; sourceTree = "<group>"; };
+		A7A614C21B30F40E008997BD /* Module.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Module.m; sourceTree = "<group>"; };
+		A7A614C51B30F46E008997BD /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
+		A7A614C61B30F46E008997BD /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
 		A7A98C8E1B06ED2500A1176D /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		A7A98C8F1B06ED2500A1176D /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		A7A98C901B06ED2500A1176D /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -289,6 +298,25 @@
 				EAF6B9306F1C323A146C2E8D /* libPods-Chnword.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7071BA51B2F9D940081CE0C /* un_used */ = {
+			isa = PBXGroup;
+			children = (
+				A78F9F7F1AEE68B900F6CE9C /* MainViewController.h */,
+				A78F9F801AEE68B900F6CE9C /* MainViewController.m */,
+				A78F9F821AEE68C900F6CE9C /* PageViewController.h */,
+				A78F9F831AEE68C900F6CE9C /* PageViewController.m */,
+				A78F9F851AEE68DA00F6CE9C /* StoreViewController.h */,
+				A78F9F861AEE68DA00F6CE9C /* StoreViewController.m */,
+				A78F9F8E1AEE6AB400F6CE9C /* AnimViewController.h */,
+				A78F9F8F1AEE6AB400F6CE9C /* AnimViewController.m */,
+				A78F9F911AEE6ABF00F6CE9C /* ScanViewController.h */,
+				A78F9F921AEE6ABF00F6CE9C /* ScanViewController.m */,
+				A78F9F941AEE6BB200F6CE9C /* ResultViewController.h */,
+				A78F9F951AEE6BB200F6CE9C /* ResultViewController.m */,
+			);
+			name = un_used;
 			sourceTree = "<group>";
 		};
 		A7158E631B02D52D006EB801 /* network */ = {
@@ -448,6 +476,7 @@
 		A78F9F511AED36C700F6CE9C /* Chnword */ = {
 			isa = PBXGroup;
 			children = (
+				A7A614C41B30F441008997BD /* beans */,
 				A7158E631B02D52D006EB801 /* network */,
 				A78F38321AFDA26E002A6F25 /* Resource */,
 				A78F9F781AEE674900F6CE9C /* classes */,
@@ -474,6 +503,7 @@
 		A78F9F781AEE674900F6CE9C /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				A7071BA51B2F9D940081CE0C /* un_used */,
 				A778C4801AEFD73D0058185F /* cells */,
 				A78F9F791AEE684D00F6CE9C /* SplashViewController.h */,
 				A78F9F7A1AEE684D00F6CE9C /* SplashViewController.m */,
@@ -481,24 +511,25 @@
 				A78F9F7D1AEE685900F6CE9C /* GuideViewController.m */,
 				A78F9F971AEE730200F6CE9C /* RegisterViewController.h */,
 				A78F9F981AEE730200F6CE9C /* RegisterViewController.m */,
-				A78F9F7F1AEE68B900F6CE9C /* MainViewController.h */,
-				A78F9F801AEE68B900F6CE9C /* MainViewController.m */,
-				A78F9F821AEE68C900F6CE9C /* PageViewController.h */,
-				A78F9F831AEE68C900F6CE9C /* PageViewController.m */,
-				A78F9F851AEE68DA00F6CE9C /* StoreViewController.h */,
-				A78F9F861AEE68DA00F6CE9C /* StoreViewController.m */,
 				A78F9F881AEE68E500F6CE9C /* UserViewController.h */,
 				A78F9F891AEE68E500F6CE9C /* UserViewController.m */,
-				A78F9F8E1AEE6AB400F6CE9C /* AnimViewController.h */,
-				A78F9F8F1AEE6AB400F6CE9C /* AnimViewController.m */,
-				A78F9F911AEE6ABF00F6CE9C /* ScanViewController.h */,
-				A78F9F921AEE6ABF00F6CE9C /* ScanViewController.m */,
-				A78F9F941AEE6BB200F6CE9C /* ResultViewController.h */,
-				A78F9F951AEE6BB200F6CE9C /* ResultViewController.m */,
 				A78F38631AFDD0B4002A6F25 /* DisplayMovieViewController.h */,
 				A78F38641AFDD0B4002A6F25 /* DisplayMovieViewController.m */,
+				A7071BA61B2F9DC20081CE0C /* WordViewController.h */,
+				A7071BA71B2F9DC20081CE0C /* WordViewController.m */,
 			);
 			name = classes;
+			sourceTree = "<group>";
+		};
+		A7A614C41B30F441008997BD /* beans */ = {
+			isa = PBXGroup;
+			children = (
+				A7A614C11B30F40E008997BD /* Module.h */,
+				A7A614C21B30F40E008997BD /* Module.m */,
+				A7A614C51B30F46E008997BD /* Word.h */,
+				A7A614C61B30F46E008997BD /* Word.m */,
+			);
+			name = beans;
 			sourceTree = "<group>";
 		};
 		A7A98C8B1B06ED2500A1176D /* libs */ = {
@@ -711,6 +742,7 @@
 				A7158E691B02D56C006EB801 /* NetParamFactory.m in Sources */,
 				A7A98CBF1B06ED2500A1176D /* UIButton+AFNetworking.m in Sources */,
 				A78F9F8A1AEE68E500F6CE9C /* UserViewController.m in Sources */,
+				A7A614C71B30F46E008997BD /* Word.m in Sources */,
 				A78F38311AFDA25E002A6F25 /* NSObject+Delay.m in Sources */,
 				A7E14C671AF664D300018386 /* FontCollectionViewCell.m in Sources */,
 				A7A98CB81B06ED2500A1176D /* AFURLConnectionOperation.m in Sources */,
@@ -726,10 +758,12 @@
 				A704627A1AF7C3FB005F2FE8 /* AnimCollectionViewCell.m in Sources */,
 				A78F9F901AEE6AB400F6CE9C /* AnimViewController.m in Sources */,
 				A7A98CBD1B06ED2500A1176D /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				A7071BA81B2F9DC20081CE0C /* WordViewController.m in Sources */,
 				A78F9F811AEE68B900F6CE9C /* MainViewController.m in Sources */,
 				A78F9F581AED36C700F6CE9C /* AppDelegate.m in Sources */,
 				A78F9F7E1AEE685900F6CE9C /* GuideViewController.m in Sources */,
 				A7A98CC21B06ED2500A1176D /* UIRefreshControl+AFNetworking.m in Sources */,
+				A7A614C31B30F40E008997BD /* Module.m in Sources */,
 				A7A98CBA1B06ED2500A1176D /* AFURLResponseSerialization.m in Sources */,
 				A74725DE1B1958220065E512 /* CoverFlowView.m in Sources */,
 				A7A98CB41B06ED2500A1176D /* AFHTTPRequestOperationManager.m in Sources */,
