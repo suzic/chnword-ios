@@ -142,6 +142,74 @@
     }];
     
     
+    
+    NSString *activeCode = self.activeCodeField.text;
+    
+    NSString *opid = [Util generateUuid];
+    NSString *deviceId = [Util getUdid];
+    NSString *userid = [DataUtil getDefaultUser];
+    
+    //本地用户存储
+    //    [DataUtil setDefaultUser:deviceId];
+    [self.hud show:YES];
+    
+    //    NSDictionary *param = [NetParamFactory registParam:opid userid:userid device:deviceId userCode:userid  deviceId:deviceId session:[Util generateUuid] verify:@"verify"];
+    NSDictionary *param = [NetParamFactory verifyParam:opid userid:userid device:deviceId code:activeCode user:userid];
+    [NetManager postRequest:URL_VERIFY param:param success:^(id json){
+        
+        NSLog(@"success with json: %@", json);
+        
+        [self.hud hide:YES];
+        
+        NSDictionary *dict = json;
+        
+        NSString *str = [dict objectForKey:@"result"];
+        if (str && [@"1" isEqualToString:str]) {
+            //成功
+            
+            NSDictionary *data = [dict objectForKey:@"data"];
+            if (data) {
+                
+                NSString *unlock_all = [dict objectForKey:@"unlock_all"];
+                NSArray *zones = [dict objectForKey:@"unlock_zone"];
+                if (unlock_all && [@"1" isEqualToString:unlock_all]) {
+                    //解锁全部的
+                    NSLog(@"unlock——all");
+                    [DataUtil setUnlockAllModelsForUser:[DataUtil getDefaultUser]];
+                    
+                    
+                } else {
+                    //得到解锁的其他条目,处理unlock_zone.
+                    for (NSString *unlocked in zones) {
+                        NSLog(@"unlocked %@", unlocked);
+                    }
+                    
+                    [DataUtil setUnlockModel:userid models:zones];
+                    
+                    
+                }
+                NSString *message = [NSString stringWithFormat:@"解锁成功：\n data \n %@", data];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:message delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+                [alert show];
+                
+            }else {
+                NSString *message = [dict objectForKey:@"message"];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:message delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+                [alert show];
+            }
+            
+            
+        }
+        
+    }fail:^ (){
+        NSLog(@"fail ");
+        [self.hud hide:YES];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"网络连接失败" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+        [alert show];
+    }];
+
+    
+    
     [self performSegueWithIdentifier:@"PushToMain" sender:nil];
 }
 
