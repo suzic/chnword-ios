@@ -10,14 +10,20 @@
 #import "Module.h"
 #import "MBProgressHUD.h"
 
+#import "ModuleCell.h"
+#import "WordCell.h"
+
+#import "Module.h"
+#import "Word.h"
+
 #import "Util.h"
 
 @interface WordViewController () <UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (nonatomic, retain) MBProgressHUD *hud;
 
-@property (nonatomic, retain) NSArray *modules;
-@property (nonatomic, retain) NSArray *words;
+@property (nonatomic, retain) NSMutableArray *modules;
+@property (nonatomic, retain) NSMutableArray *words;
 
 
 @end
@@ -32,6 +38,9 @@
     [super viewDidLoad];
     
     [self showModule];
+    
+    //请求modules
+    [self requestModules];
     
 }
 
@@ -52,20 +61,31 @@
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    
+    return self.modules.count;
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    ModuleCell *cell = nil;
+    Module *module = [self.modules objectAtIndex:indexPath.row];
     if (tableView == self.moduleTableView) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"ModuleCell" forIndexPath:indexPath];
+        
+        cell.moduleNameLable.text = module.moduleName;
+//        cell.lockStateLabel.text = module.moduleCode;
+        cell.lockStateLabel.text = @"";
         
     } else if (tableView == self.wordTableView) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"ModuleCell" forIndexPath:indexPath];
         
+        cell.moduleNameLable.text = module.moduleName;
+        //        cell.lockStateLabel.text = module.moduleCode;
+        cell.lockStateLabel.text = @"";
         
     }
     
-    return nil;
+    return cell;
 }
 
 #pragma mark - table delegate
@@ -74,8 +94,14 @@
 {
     if (tableView == self.moduleTableView) {
         
+        [self showWord:[self.modules objectAtIndex:indexPath.row]];
+        [self.wordTableView reloadData];
+        
     } else if (tableView == self.wordTableView) {
         
+        //request net
+        [self requestWord:[self.modules objectAtIndex:indexPath.row]];
+//        [self.wordCollectionView reloadData];
         
     }
     
@@ -89,12 +115,15 @@
 }
 - (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 0;
+    return self.words.count;
 }
 
 - (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return nil;
+    WordCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"WordCell" forIndexPath:indexPath];
+    Word *word = [self.words objectAtIndex:indexPath.row];
+    cell.wordLabel.text = word.wordName;
+    return cell;
 }
 
 
@@ -143,14 +172,28 @@
         if (result && [result isEqualToString:@"1"]) {
             
             NSDictionary *data = [dict objectForKey:@"data"];
-            NSArray *array = [dict objectForKey:@""];
-            if (data) {
-                
+            NSArray *array = [dict objectForKey:@"name"];
+            NSArray *carray = [data objectForKey:@"cname"];
+            if (data && array) {
+                [self.modules removeAllObjects];
+                Module *module = nil;
+                for (NSInteger i = 0; i < array.count ; i ++) {
+                    
+                    module = [[Module alloc] init];
+                    module.moduleName = [array objectAtIndex:i];
+                    module.moduleCode = [carray objectAtIndex:i];
+                    
+                    [self.modules addObject:module];
+                }
+                [self.moduleTableView reloadData];
+            } else {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"无参数" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+                [alert show];
             }
             
             
         }else {
-            
+            [self.hud hide:YES];
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"网络参数不对" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
             [alert show];
         }
@@ -190,15 +233,23 @@
         if (result && [result isEqualToString:@"1"]) {
             
             NSDictionary *data = [dict objectForKey:@"data"];
+            NSArray *wArray = [data objectForKey:@"word"];
+            NSArray *wCode  = [data objectForKey:@"unicode"];
             
-            if (data != NULL) {
-                //                self.wordNames = [data objectForKey:@"word_name"];
-                //                self.wordIndexs = [data objectForKey:@"word_index"];
-//                self.wordNames = [data objectForKey:@"word"];
-//                self.wordIndexs = [data objectForKey:@"unicode"];
+            if (data && wArray && wCode) {
+                [self.words removeAllObjects];
+                for (NSInteger i = 0; i < wArray.count; i ++) {
+                    Word *word = [[Word alloc] init];
+                    word.wordName = [wArray objectAtIndex:i];
+                    word.wordCode = [wCode  objectAtIndex:i];
+                    [self.words addObject:word];
+                }
+                [self.wordCollectionView reloadData];
+                
                 
             } else  {
-                [self.hud hide:YES];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"无参数返回" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+                [alert show];
             }
             
 //            [self.collectionView reloadData];
@@ -222,6 +273,27 @@
     
 }
 
+#pragma mark - UIAction Event Handler
+/**
+ *  scan 点击
+ */
+- (IBAction) onScanButtonClicked:(id)sender
+{
+    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"ScanViewController"];
+    [self.navigationController pushViewController: controller animated:YES];
+}
+
+/**
+ *  用户 点击
+ */
+- (IBAction) onUserButtonClicked:(id)sender
+{
+    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"UserViewController"];
+    [self presentViewController:controller animated:YES completion:^{
+        
+    }];
+}
+
 
 #pragma mark -getter
 
@@ -239,6 +311,18 @@
         [self.navigationController.view addSubview:_hud];
     }
     return _hud;
+}
+- (NSMutableArray *) modules {
+    if (!_modules) {
+        _modules = [NSMutableArray array];
+    }
+    return _modules;
+}
+- (NSMutableArray *) words {
+    if (!_words) {
+        _words = [NSMutableArray array];
+    }
+    return _words;
 }
 
 @end

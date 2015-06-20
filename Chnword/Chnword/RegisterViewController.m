@@ -13,6 +13,7 @@
 #import "DataUtil.h"
 
 
+
 @interface RegisterViewController ()
 
 @property (nonatomic, retain) IBOutlet UITextField *usercode;
@@ -142,7 +143,7 @@
     }];
     
     
-    
+    /*
     NSString *activeCode = self.activeCodeField.text;
     
     NSString *opid = [Util generateUuid];
@@ -208,7 +209,7 @@
         [alert show];
     }];
 
-    
+    */
     
     [self performSegueWithIdentifier:@"PushToMain" sender:nil];
 }
@@ -222,6 +223,9 @@
         [self.usercode resignFirstResponder];
     }
 }
+
+
+
 
 
 @end

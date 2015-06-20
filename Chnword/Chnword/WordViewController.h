@@ -19,6 +19,15 @@
 
 
 
+#pragma mark - UIAction Event Handler
+/**
+ *  scan 点击
+ */
+- (IBAction) onScanButtonClicked:(id)sender;
 
+/**
+ *  用户 点击
+ */
+- (IBAction) onUserButtonClicked:(id)sender;
 
 @end

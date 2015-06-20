@@ -68,6 +68,7 @@
 		A78F9F961AEE6BB200F6CE9C /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F9F951AEE6BB200F6CE9C /* ResultViewController.m */; };
 		A78F9F991AEE730200F6CE9C /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78F9F981AEE730200F6CE9C /* RegisterViewController.m */; };
 		A79252B21B1BE112006DFFC7 /* sample.gif in Resources */ = {isa = PBXBuildFile; fileRef = A79252B11B1BE112006DFFC7 /* sample.gif */; };
+		A799559E1B34E22D0097FF3E /* WordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A799559D1B34E22D0097FF3E /* WordCell.m */; };
 		A7A614C31B30F40E008997BD /* Module.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A614C21B30F40E008997BD /* Module.m */; };
 		A7A614C71B30F46E008997BD /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A614C61B30F46E008997BD /* Word.m */; };
 		A7A98CB31B06ED2500A1176D /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A98C8F1B06ED2500A1176D /* AFHTTPRequestOperation.m */; };
@@ -94,6 +95,7 @@
 		A7F6DA5F1B22DF8D005ABCC9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F6DA5E1B22DF8D005ABCC9 /* AudioToolbox.framework */; };
 		A7F6DA611B22DFC8005ABCC9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F6DA601B22DFC8005ABCC9 /* CoreGraphics.framework */; };
 		A7F9F45A1B2288C3005FEF2D /* libSDWebImage_universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F9F4591B2288C3005FEF2D /* libSDWebImage_universal.a */; };
+		A7FB98281B31CC6F00C7ED48 /* ModuleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FB98271B31CC6F00C7ED48 /* ModuleCell.m */; };
 		B95841E53F54693E568F63E0 /* libPods-Chnword.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF6B9306F1C323A146C2E8D /* libPods-Chnword.a */; };
 /* End PBXBuildFile section */
 
@@ -201,6 +203,8 @@
 		A78F9F981AEE730200F6CE9C /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		A78F9FA31AEE806100F6CE9C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		A79252B11B1BE112006DFFC7 /* sample.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sample.gif; sourceTree = "<group>"; };
+		A799559C1B34E22D0097FF3E /* WordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordCell.h; sourceTree = "<group>"; };
+		A799559D1B34E22D0097FF3E /* WordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordCell.m; sourceTree = "<group>"; };
 		A7A614C11B30F40E008997BD /* Module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Module.h; sourceTree = "<group>"; };
 		A7A614C21B30F40E008997BD /* Module.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Module.m; sourceTree = "<group>"; };
 		A7A614C51B30F46E008997BD /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
@@ -250,6 +254,8 @@
 		A7F6DA5E1B22DF8D005ABCC9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A7F6DA601B22DFC8005ABCC9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A7F9F4591B2288C3005FEF2D /* libSDWebImage_universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSDWebImage_universal.a; sourceTree = "<group>"; };
+		A7FB98261B31CC6F00C7ED48 /* ModuleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModuleCell.h; sourceTree = "<group>"; };
+		A7FB98271B31CC6F00C7ED48 /* ModuleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModuleCell.m; sourceTree = "<group>"; };
 		EAF6B9306F1C323A146C2E8D /* libPods-Chnword.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Chnword.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -503,6 +509,7 @@
 		A78F9F781AEE674900F6CE9C /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				A7FB98251B31CC5F00C7ED48 /* cell */,
 				A7071BA51B2F9D940081CE0C /* un_used */,
 				A778C4801AEFD73D0058185F /* cells */,
 				A78F9F791AEE684D00F6CE9C /* SplashViewController.h */,
@@ -603,6 +610,17 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		A7FB98251B31CC5F00C7ED48 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				A7FB98261B31CC6F00C7ED48 /* ModuleCell.h */,
+				A7FB98271B31CC6F00C7ED48 /* ModuleCell.m */,
+				A799559C1B34E22D0097FF3E /* WordCell.h */,
+				A799559D1B34E22D0097FF3E /* WordCell.m */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -636,7 +654,7 @@
 				TargetAttributes = {
 					A78F9F4E1AED36C700F6CE9C = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = C3G79G7UVP;
+						DevelopmentTeam = 5P2X2JD5KZ;
 					};
 				};
 			};
@@ -766,11 +784,13 @@
 				A7A614C31B30F40E008997BD /* Module.m in Sources */,
 				A7A98CBA1B06ED2500A1176D /* AFURLResponseSerialization.m in Sources */,
 				A74725DE1B1958220065E512 /* CoverFlowView.m in Sources */,
+				A7FB98281B31CC6F00C7ED48 /* ModuleCell.m in Sources */,
 				A7A98CB41B06ED2500A1176D /* AFHTTPRequestOperationManager.m in Sources */,
 				A7A98CB31B06ED2500A1176D /* AFHTTPRequestOperation.m in Sources */,
 				A78F9F931AEE6ABF00F6CE9C /* ScanViewController.m in Sources */,
 				A7E14C641AF6646D00018386 /* ModelTableViewCell.m in Sources */,
 				A78F9F871AEE68DA00F6CE9C /* StoreViewController.m in Sources */,
+				A799559E1B34E22D0097FF3E /* WordCell.m in Sources */,
 				A78F9F991AEE730200F6CE9C /* RegisterViewController.m in Sources */,
 				A7A98CB61B06ED2500A1176D /* AFNetworkReachabilityManager.m in Sources */,
 				A778C4861AF11BC90058185F /* StoreViewTableViewCell.m in Sources */,
